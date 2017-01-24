@@ -1,22 +1,22 @@
 package com.projectbelatrix.quejapp;
 
-import android.content.Intent;
-import android.graphics.Typeface;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
-import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
+        import android.content.Intent;
+        import android.graphics.Typeface;
+        import android.support.v7.app.AppCompatActivity;
+        import android.os.Bundle;
+        import android.view.View;
+        import android.view.Window;
+        import android.view.WindowManager;
+        import android.widget.EditText;
+        import android.widget.TextView;
+        import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     EditText pwd, usr;
     TextView reg, login;
     DatabaseHelper helper = new DatabaseHelper(this);
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,11 +38,11 @@ public class MainActivity extends AppCompatActivity {
         reg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent i = new Intent(MainActivity.this, TabsActivity.class);
                 startActivity(i);
             }
         });
-        
         login.setOnClickListener(new View.OnClickListener() {
             String user = usr.getText().toString();
             String pass = pwd.getText().toString();
@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
     //  public void launchTabActivity(View v) {
     //    Intent i = new Intent(this, TabsActivity.class);
     //  startActivity(i);

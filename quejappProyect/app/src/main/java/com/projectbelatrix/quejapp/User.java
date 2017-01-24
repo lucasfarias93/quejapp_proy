@@ -5,15 +5,8 @@ package com.projectbelatrix.quejapp;
  */
 
 public class User {
-    int id ;
-    String username,password,email;
 
-    public void setId (int id){
-        this.id = id ;
-    }
-    public int getId () {
-        return this.id;
-    }
+    String username,password,email,nombre,apellido;
 
     public void setUsername(String username) {
         this.username = username;
@@ -37,5 +30,21 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getNombre() {
+        return nombre;
     }
 }

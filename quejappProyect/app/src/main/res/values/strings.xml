@@ -10,4 +10,6 @@
     <string name="direccion_de_correo">Direccion de Correo</string>
     <string name="registrarse">Registrarse</string>
     <string name="ya_tienes_cuenta_logeate">Ya tienes cuenta ? Logeate</string>
+    <string name="apellido">Apellido</string>
+    <string name="nombre">Nombre</string>
 </resources>

@@ -14,8 +14,8 @@ public class TabsActivity extends AppCompatActivity {
         tabHost= (FragmentTabHost) findViewById(android.R.id.tabhost);
         tabHost.setup(this,getSupportFragmentManager(),android.R.id.tabcontent);
 
-        tabHost.addTab(tabHost.newTabSpec("tab1").setIndicator("calendario"),Tab1.class, null);
-        tabHost.addTab(tabHost.newTabSpec("tab2").setIndicator("radio group"),Tab2.class, null);
-        tabHost.addTab(tabHost.newTabSpec("tab3").setIndicator("reloj"),Tab3.class, null);
+        tabHost.addTab(tabHost.newTabSpec("tab1").setIndicator("¿Que desea hacer?"),Tab1.class, null);
+        tabHost.addTab(tabHost.newTabSpec("tab2").setIndicator("Historial de reclamos"),Tab2.class, null);
+        tabHost.addTab(tabHost.newTabSpec("tab3").setIndicator("Más sobre Quejapp"),Tab3.class, null);
     }
 }
