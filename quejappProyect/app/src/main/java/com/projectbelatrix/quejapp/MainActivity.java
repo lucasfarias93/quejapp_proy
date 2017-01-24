@@ -64,9 +64,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-
-    /*public void launchTabActivity(View v) {
-        Intent i = new Intent(this, TabsActivity.class);
-        startActivity(i);
-    }*/
+    //  public void launchTabActivity(View v) {
+    //    Intent i = new Intent(this, TabsActivity.class);
+    //  startActivity(i);
+    // }
 }
