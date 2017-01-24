@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">quejapp</string>
+    <string name="text1">Este es un Texto de ejemplo</string>
+    <string name="text2">Este es un Texto de ejemplo para cada tab</string>
+    <string name="button1">Click para ver los tabs</string>
+</resources>
