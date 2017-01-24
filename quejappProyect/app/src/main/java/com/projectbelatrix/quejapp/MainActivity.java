@@ -1,20 +1,40 @@
 package com.projectbelatrix.quejapp;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    EditText pwd,usr;
+    TextView reg,login;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        //Sacamos la barra de titulo de la aplicacion y de notificaciones
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        setContentView(R.layout.login);
+        login = (TextView) findViewById(R.id.login);
+        usr = (EditText) findViewById(R.id.user);
+        pwd = (EditText) findViewById(R.id.pwd);
+        reg = (TextView) findViewById(R.id.reg);
+        Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/LatoLight.ttf");
+        Typeface custom_font1 = Typeface.createFromAsset(getAssets(), "fonts/LatoRegular.ttf");
+        login.setTypeface(custom_font1);
+        reg.setTypeface(custom_font);
+        usr.setTypeface(custom_font);
+        pwd.setTypeface(custom_font);
+
     }
 
-    public void launchTabgActivity(View v) {
+    public void launchTabActivity(View v) {
         Intent i = new Intent(this, TabsActivity.class);
         startActivity(i);
     }

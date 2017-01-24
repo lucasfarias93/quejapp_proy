@@ -3,4 +3,11 @@
     <string name="text1">Este es un Texto de ejemplo</string>
     <string name="text2">Este es un Texto de ejemplo para cada tab</string>
     <string name="button1">Click para ver los tabs</string>
+    <string name="usuario">Usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="login">Login</string>
+    <string name="no_tienes_cuenta_registrate">No Tienes Cuenta ? Registrate</string>
+    <string name="direccion_de_correo">Direccion de Correo</string>
+    <string name="registrarse">Registrarse</string>
+    <string name="ya_tienes_cuenta_logeate">Ya tienes cuenta ? Logeate</string>
 </resources>
