@@ -9,11 +9,14 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText pwd,usr;
-    TextView reg,login;
+    EditText pwd, usr;
+    TextView reg, login;
+    DatabaseHelper helper = new DatabaseHelper(this);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,10 +35,37 @@ public class MainActivity extends AppCompatActivity {
         usr.setTypeface(custom_font);
         pwd.setTypeface(custom_font);
 
+        reg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, Register.class);
+                startActivity(i);
+            }
+        });
+        login.setOnClickListener(new View.OnClickListener() {
+            String user = usr.getText().toString();
+            String pass = pwd.getText().toString();
+
+            @Override
+            public void onClick(View v) {
+                String password = helper.searchPassword(user);
+                //  String username = helper.searchUsername (pass);
+
+                if (pass.equals(password)) {
+                    Toast mensaje = Toast.makeText(MainActivity.this, "LO LOGRASTE WACHIN!", Toast.LENGTH_LONG);
+                    mensaje.show();
+
+                } else {
+                    Toast error = Toast.makeText(MainActivity.this, "Pass o usuarios Incorrectos ", Toast.LENGTH_LONG);
+                    error.show();
+                }
+            }
+        });
+
     }
 
-    public void launchTabActivity(View v) {
-        Intent i = new Intent(this, TabsActivity.class);
-        startActivity(i);
-    }
+    //  public void launchTabActivity(View v) {
+    //    Intent i = new Intent(this, TabsActivity.class);
+    //  startActivity(i);
+    // }
 }
