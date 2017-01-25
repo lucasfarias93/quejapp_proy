@@ -198,7 +198,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/background_button_blue_white"
             android:text="@string/registrarse"
-            android:textColor="@color/colorTextBlack"
+            android:textColor="@color/colorTextWhite"
             android:textStyle="bold"
             android:gravity="center"
             android:layout_gravity="bottom"
