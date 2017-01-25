@@ -6,10 +6,11 @@
     <string name="usuario">Usuario</string>
     <string name="password">Contraseña</string>
     <string name="login">Login</string>
-    <string name="no_tienes_cuenta_registrate">No Tienes Cuenta ? Registrate</string>
+    <string name="no_tienes_cuenta_registrate">No Tienes Cuenta? <u>Registrate</u></string>
     <string name="direccion_de_correo">Direccion de Correo</string>
     <string name="registrarse">Registrarse</string>
-    <string name="ya_tienes_cuenta_logeate">Ya tienes cuenta ? Logeate</string>
+    <string name="ya_tienes_cuenta_logeate">Ya tienes cuenta? <u>Logeate</u></string>
     <string name="apellido">Apellido</string>
     <string name="nombre">Nombre</string>
+    <string name="eleccion_primer_tab">Por favor, eliga que desea realizar a continuación</string>
 </resources>

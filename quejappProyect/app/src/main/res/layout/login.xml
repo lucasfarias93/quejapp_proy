@@ -28,7 +28,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/usuario"
-                    android:textColorHint="#d9e5f3"
+                    android:textColorHint="#353533"
                     android:layout_marginLeft="@dimen/Size15dp"
                     android:background="#00000000"
                     android:letterSpacing="0.1"
@@ -56,7 +56,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/password"
-                    android:textColorHint="#d9e5f3"
+                    android:textColorHint="#353533"
                     android:layout_marginLeft="@dimen/Size15dp"
                     android:background="#00000000"
                     android:inputType="textPassword"
@@ -82,7 +82,7 @@
             android:id="@+id/login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#009a9a"
+            android:background="@drawable/background_button_blue_white"
             android:text="@string/login"
             android:textColor="#d9e5f3"
             android:textStyle="bold"
@@ -97,7 +97,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@string/no_tienes_cuenta_registrate"
-            android:textColor="#d9e5f3"
+            android:textColor="#353533"
             android:letterSpacing="0.1"/>
     </LinearLayout>
     <LinearLayout

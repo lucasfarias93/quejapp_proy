@@ -2,16 +2,25 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-    <ImageView
+    <LinearLayout
+        android:id="@+id/image_layout"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:background="@color/colorPrimary"/>
+        android:background="@drawable/background_image_tabs_90">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/SizeLogo"
+            android:src="@drawable/logo5"
+            android:id="@+id/imageView2" />
+    </LinearLayout>
 
     <android.support.v4.app.FragmentTabHost xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@android:id/tabhost"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/background_image_tabs_180"
+        android:layout_below="@+id/image_layout">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -32,10 +41,5 @@
                 android:layout_weight="1" />
         </LinearLayout>
     </android.support.v4.app.FragmentTabHost>
-    <ImageView
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        android:background="@color/colorAccent"
-        android:foregroundGravity="center"/>
 </RelativeLayout>
 

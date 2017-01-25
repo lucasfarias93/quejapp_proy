@@ -16,7 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".TabsActivity" />
-        <activity android:name=".Register"></activity>
+        <activity android:name=".Register" />
+        <activity android:name=".FormularioActivity"></activity>
     </application>
 
 </manifest>
