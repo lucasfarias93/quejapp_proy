@@ -1,18 +1,15 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    >
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/miCompose"
+        android:id="@+id/miPerfil"
         app:showAsAction="never"
         android:title="Mi Perfil"
-        android:icon="@drawable/usrusr"
-        android:color="@color/colorAccent">
+        android:icon="@drawable/usrusr">
     </item>
     <item
-        android:id="@+id/miProfile"
+        android:id="@+id/desloguearse"
         app:showAsAction="never"
         android:title="Desloguearse"
-        android:icon="@drawable/usrusr"
-        android:color="@color/colorAccent">
+        android:icon="@drawable/usrusr">
     </item>
 </menu>

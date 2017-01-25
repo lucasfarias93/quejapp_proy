@@ -154,7 +154,7 @@
                     android:inputType="textPassword"
                     android:letterSpacing="0.1"
                     android:textSize="@dimen/Size16dp"
-                    android:textColor="@color/colorTextWhite"
+                    android:textColor="@color/colorTextBlack"
                     />
             </LinearLayout>
             <LinearLayout
@@ -198,7 +198,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/background_button_blue_white"
             android:text="@string/registrarse"
-            android:textColor="@color/colorTextWhite"
+            android:textColor="@color/colorTextBlack"
             android:textStyle="bold"
             android:gravity="center"
             android:layout_gravity="bottom"

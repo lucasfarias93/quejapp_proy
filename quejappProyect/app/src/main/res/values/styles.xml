@@ -9,15 +9,9 @@
         <item name="android:windowFullscreen">true</item>
     </style>
 
-    <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
-        <item name="android:textColorPrimary">@android:color/holo_blue_light</item>
-        <item name="actionMenuTextColor">@android:color/holo_green_light</item>
-
-    </style>
-
-    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
-        <item name="android:textSize">21sp</item>
-        <item name="android:textStyle">italic</item>
+    <!-- En caso de querer que aparezca el nombre de la app en el Action bar -->
+    <style name="ActionBarTitleTextStyle" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/colorTitleMenu</item>
     </style>
 
 </resources>
