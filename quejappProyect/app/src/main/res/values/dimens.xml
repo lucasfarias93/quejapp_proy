@@ -4,10 +4,20 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="Size60dp">60dp</dimen>
     <dimen name="Size16dp">16dp</dimen>
+    <dimen name="Size12dp">12dp</dimen>
+    <dimen name="Size5dp">5dp</dimen>
+    <dimen name="Size40dp">40dp</dimen>
+    <dimen name="Size10dp">10dp</dimen>
     <dimen name="Size20dp">20dp</dimen>
     <dimen name="Size15dp">15dp</dimen>
     <dimen name="Size1dp">1dp</dimen>
     <dimen name="Size50dp">50dp</dimen>
     <dimen name="Size400dp">400dp</dimen>
-    <dimen name="SizeLogo">243dp</dimen>
+    <dimen name="SizeLogo1">120dp</dimen>
+    <dimen name="SizeLogo2">243dp</dimen>
+    <dimen name="Size100dp">100dp</dimen>
+    <dimen name="SizeMargin570dp">570dp</dimen>
+    <dimen name="SizeWidthButton_150dp">150dp</dimen>
+    <dimen name="SizeHeightButton_75dp">75dp</dimen>
+
 </resources>

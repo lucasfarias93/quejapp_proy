@@ -109,7 +109,7 @@
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="@dimen/SizeLogo"
+            android:layout_height="@dimen/SizeLogo2"
             android:src="@drawable/logo5"
             android:layout_weight="0.72"
             android:id="@+id/imageView2" />

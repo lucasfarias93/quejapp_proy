@@ -18,7 +18,7 @@
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="@dimen/SizeLogo"
+            android:layout_height="@dimen/SizeLogo2"
             android:src="@drawable/logo5"
             android:id="@+id/imageView2" />
     </RelativeLayout>

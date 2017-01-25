@@ -44,7 +44,8 @@ public class TabsActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id==R.id.miPerfil) {
-            Toast.makeText(this,"Se seleccionó la primer opción",Toast.LENGTH_LONG).show();
+            Intent i = new Intent(TabsActivity.this, UsuarioPerfilActivity.class);
+            startActivity(i);
         }
         if (id==R.id.desloguearse) {
             Intent salida = new Intent(Intent.ACTION_MAIN);

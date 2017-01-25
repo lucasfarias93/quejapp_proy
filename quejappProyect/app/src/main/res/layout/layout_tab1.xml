@@ -13,9 +13,9 @@
         android:gravity="center_horizontal"/>
 
     <Button
-        android:layout_width="150dp"
-        android:layout_height="75dp"
-        android:textColor="#fff"
+        android:layout_width="@dimen/SizeWidthButton_150dp"
+        android:layout_height="@dimen/SizeHeightButton_75dp"
+        android:textColor="@color/colorTextWhite"
         android:textStyle="normal"
         android:text="Cargar nuevo Formulario"
         android:id="@+id/cargarFormulario"
@@ -27,9 +27,9 @@
         android:background="@drawable/background_button_blue_white"/>
 
     <Button
-        android:layout_width="150dp"
-        android:layout_height="75dp"
-        android:textColor="#fff"
+        android:layout_width="@dimen/SizeWidthButton_150dp"
+        android:layout_height="@dimen/SizeHeightButton_75dp"
+        android:textColor="@color/colorTextWhite"
         android:text="Hacer Otra cosa"
         android:textStyle="normal"
         android:id="@+id/hacerOtraCosa"

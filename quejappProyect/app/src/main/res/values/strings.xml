@@ -13,4 +13,8 @@
     <string name="apellido">Apellido</string>
     <string name="nombre">Nombre</string>
     <string name="eleccion_primer_tab">Por favor, eliga que desea realizar a continuación</string>
+    <string name="usuario_y_contraseña_data">Los datos de usuario y contraseña</string>
+    <string name="datos_personales">Los datos personales de usuario</string>
+    <string name="actualizar_data">Actualizar datos</string>
+    <string name="cancelar_actualizar">Cancelar</string>
 </resources>
