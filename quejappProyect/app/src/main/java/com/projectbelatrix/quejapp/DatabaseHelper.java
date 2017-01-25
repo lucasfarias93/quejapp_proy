@@ -49,10 +49,28 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.insert(TABLE_NAME , null , values);
         db.close();
     }
-    public String searchPassword (String uname){
+    public boolean validateUser(String user) {
+        boolean valor = false;
+        db = this.getReadableDatabase();
+        String query = "select usuario from " + TABLE_NAME;
+        Cursor cursor = db.rawQuery(query, null);
+        String a;
+
+        if (cursor.moveToFirst()) {
+            do {
+                a = cursor.getString(0);
+                if (a.equals(user)) {
+                    valor = true;
+                }
+            } while (cursor.moveToNext());
+            return valor;
+        }
+        return valor;
+    }
+    public String searchPassword (String user){
 
        db = this.getReadableDatabase();
-        String query = " select usuario , contraseña from "+TABLE_NAME;
+        String query = " select usuario, contraseña from "+TABLE_NAME;
         Cursor cursor = db.rawQuery(query , null);
         String a , b ;
         b = "not found";
@@ -60,8 +78,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             do {
                 a = cursor.getString(0);
                 b = cursor.getString(1);
-                if (a.equals(uname)){
-
+                if (a.equals(user)){
                  b = cursor.getString(1);
                 }
             } while (cursor.moveToNext());

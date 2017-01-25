@@ -51,15 +51,27 @@ public class Register extends AppCompatActivity {
                 u.setPassword(contraseñaString);
                 u.setUsername(usuarioString);
 
-                helper.insertUser(u);
-                if ((nameString +apellidoString + emailString + contraseñaString + usuarioString ).equals("")) {
-
-                    Toast  msj =Toast.makeText(Register.this,"Ha dejado campos vacios o incorrectos",Toast.LENGTH_LONG);
-                    msj.show();
+                if (helper.validateUser(usuarioString)) {
+                    Toast.makeText(Register.this, "El usuario ya existe, intente loguearse", Toast.LENGTH_LONG).show();
                 } else {
-                    Intent i = new Intent(Register.this , MainActivity.class);
-                    startActivity(i);
+                    helper.insertUser(u);
+                    if ((nameString + apellidoString + emailString + contraseñaString + usuarioString).equals("")) {
+
+                        Toast msj = Toast.makeText(Register.this, "Ha dejado campos vacios o incorrectos", Toast.LENGTH_LONG);
+                        msj.show();
+                    } else {
+                        Intent i = new Intent(Register.this, MainActivity.class);
+                        startActivity(i);
+                    }
                 }
+            }
+        });
+
+        log.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Register.this, MainActivity.class);
+                startActivity(i);
             }
         });
 

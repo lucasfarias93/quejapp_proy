@@ -39,22 +39,22 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent i = new Intent(MainActivity.this, TabsActivity.class);
+                Intent i = new Intent(MainActivity.this, Register.class);
                 startActivity(i);
             }
         });
         login.setOnClickListener(new View.OnClickListener() {
-            String user = usr.getText().toString();
-            String pass = pwd.getText().toString();
-
             @Override
             public void onClick(View v) {
+                String user = usr.getText().toString();
+                String pass = pwd.getText().toString();
                 String password = helper.searchPassword(user);
-                //  String username = helper.searchUsername (pass);
 
                 if (pass.equals(password)) {
                     Toast mensaje = Toast.makeText(MainActivity.this, "LO LOGRASTE WACHIN!", Toast.LENGTH_LONG);
                     mensaje.show();
+                    Intent i = new Intent(MainActivity.this, TabsActivity.class);
+                    startActivity(i);
 
                 } else {
                     Toast error = Toast.makeText(MainActivity.this, "Pass o usuarios Incorrectos ", Toast.LENGTH_LONG);
@@ -62,11 +62,5 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
     }
-
-    //  public void launchTabActivity(View v) {
-    //    Intent i = new Intent(this, TabsActivity.class);
-    //  startActivity(i);
-    // }
 }

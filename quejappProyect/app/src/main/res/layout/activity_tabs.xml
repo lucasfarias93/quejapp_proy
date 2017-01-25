@@ -2,18 +2,26 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/image_layout"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:background="@drawable/background_image_tabs_90">
+
+        <android.support.v7.widget.Toolbar xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/transparent"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="@dimen/SizeLogo"
             android:src="@drawable/logo5"
             android:id="@+id/imageView2" />
-    </LinearLayout>
+    </RelativeLayout>
 
     <android.support.v4.app.FragmentTabHost xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@android:id/tabhost"

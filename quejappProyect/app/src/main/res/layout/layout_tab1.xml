@@ -6,7 +6,7 @@
     <TextView
         android:id="@+id/text2"
         android:textStyle="normal"
-        android:textColor="#363535"
+        android:textColor="@color/colorTextBlack"
         android:text="@string/eleccion_primer_tab"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

@@ -33,7 +33,8 @@ public class Tab1 extends Fragment {
         formularioReclamo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent i = new Intent(TabsActivity.class, FormularioActivity.class);
+                Intent i = new Intent(getActivity(), FormularioActivity.class);
+                startActivity(i);
             }
         });
         return view;

@@ -3,10 +3,68 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:background="@drawable/background_image_tabs_180"
     tools:context="com.projectbelatrix.quejapp.FormularioActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Seleccione el tipo de reclamo que quiere ingresar"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="70dp"
+        android:layout_marginLeft="70dp"/>
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"
+        android:layout_marginTop="117dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/button_confirm"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@id/spinner"
+        android:textAlignment="center"
+        android:text="confirmar reclamo"
+        android:textStyle="bold"
+        android:textSize="10dp"
+        android:background="@drawable/background_button_blue_white"/>
+
+    <Button
+        android:id="@+id/button_blank"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/spinner"
+        android:textAlignment="center"
+        android:text="blanquear reclamo"
+        android:textStyle="bold"
+        android:textSize="10dp"
+        android:layout_toRightOf="@+id/button_confirm"
+        android:background="@drawable/background_button_blue_white"/>
+
+    <Button
+        android:id="@+id/button_cancel"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/spinner"
+        android:textAlignment="center"
+        android:text="cancelar"
+        android:textStyle="bold"
+        android:textSize="10dp"
+        android:layout_toRightOf="@id/button_blank"
+        android:background="@drawable/background_button_blue_white"/>
 
 </RelativeLayout>
