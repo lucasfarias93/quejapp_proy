@@ -86,7 +86,8 @@ public class TabsActivity extends AppCompatActivity implements ViewPager.OnPageC
 
     @Override
     public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
+        int selectedItem = this.viewPager.getCurrentItem();
+        tabHost.setCurrentTab(selectedItem);
     }
 
     @Override
@@ -96,6 +97,5 @@ public class TabsActivity extends AppCompatActivity implements ViewPager.OnPageC
 
     @Override
     public void onPageScrollStateChanged(int selectedItem) {
-     tabHost.setCurrentTab(selectedItem);
     }
 }

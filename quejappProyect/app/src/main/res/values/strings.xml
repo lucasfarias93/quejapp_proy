@@ -17,4 +17,5 @@
     <string name="datos_personales">Los datos personales de usuario</string>
     <string name="actualizar_data">Actualizar datos</string>
     <string name="cancelar_actualizar">Cancelar</string>
+    <string name="campos_obligatorios">*</string>
 </resources>

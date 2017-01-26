@@ -50,20 +50,7 @@ public class Register extends AppCompatActivity {
                 u.setEmail(emailString);
                 u.setPassword(contraseñaString);
                 u.setUsername(usuarioString);
-
-                if (helper.validateUser(usuarioString)) {
-                    Toast.makeText(Register.this, "El usuario ya existe, intente loguearse", Toast.LENGTH_LONG).show();
-                } else {
-                    helper.insertUser(u);
-                    if ((nameString + apellidoString + emailString + contraseñaString + usuarioString).equals("")) {
-
-                        Toast msj = Toast.makeText(Register.this, "Ha dejado campos vacios o incorrectos", Toast.LENGTH_LONG);
-                        msj.show();
-                    } else {
-                        Intent i = new Intent(Register.this, MainActivity.class);
-                        startActivity(i);
-                    }
-                }
+                validarCampos(usuarioString, contraseñaString, u);
             }
         });
 
@@ -75,5 +62,21 @@ public class Register extends AppCompatActivity {
             }
         });
 
+    }
+
+    public void validarCampos(String user, String contraseña, User u){
+
+        if (helper.validateUser(user)) {
+            Toast.makeText(Register.this, "El usuario ya existe, intente loguearse", Toast.LENGTH_LONG).show();
+        } else {
+            helper.insertUser(u);
+            if ((contraseña + user).equals("")) {
+                Toast msj = Toast.makeText(Register.this, "Debe completar los campos obligatorios", Toast.LENGTH_LONG);
+                msj.show();
+            } else {
+                Intent i = new Intent(Register.this, MainActivity.class);
+                startActivity(i);
+            }
+        }
     }
 }

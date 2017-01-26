@@ -87,6 +87,7 @@
                     android:layout_height="@dimen/Size20dp"
                     android:src="@drawable/usrusr"
                     android:layout_gravity="center"/>
+
                 <EditText
                     android:id="@+id/apellido"
                     android:layout_width="match_parent"
@@ -111,6 +112,11 @@
                 android:orientation="horizontal"
                 android:padding="@dimen/Size16dp">
                 <ImageView
+                    android:layout_width="@dimen/Size16dp"
+                    android:layout_height="@dimen/Size16dp"
+                    android:src="@drawable/DeleteRed"
+                    android:layout_gravity="center"/>
+                <ImageView
                     android:layout_width="@dimen/Size20dp"
                     android:layout_height="@dimen/Size20dp"
                     android:src="@drawable/usrusr"
@@ -128,6 +134,7 @@
                     android:inputType="text"
                     android:textColor="@color/colorTextBlack"
                     />
+
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -138,6 +145,11 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:padding="@dimen/Size16dp">
+                <ImageView
+                    android:layout_width="@dimen/Size16dp"
+                    android:layout_height="@dimen/Size16dp"
+                    android:src="@drawable/DeleteRed"
+                    android:layout_gravity="center"/>
                 <ImageView
                     android:layout_width="@dimen/Size20dp"
                     android:layout_height="@dimen/Size20dp"
@@ -203,9 +215,33 @@
             android:gravity="center"
             android:layout_gravity="bottom"
             android:padding="@dimen/Size16dp"
-            android:layout_marginBottom="@dimen/Size50dp"
+            android:layout_marginBottom="@dimen/Size20dp"
             android:letterSpacing="0.2"
             />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/Size20dp"
+            android:layout_marginLeft="12dp">
+            <ImageView
+                android:layout_width="@dimen/Size16dp"
+                android:layout_height="@dimen/Size16dp"
+                android:src="@drawable/DeleteRed"
+                android:layout_gravity="center"/>
+            <TextView
+                android:id="@+id/campos_obli"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/colorTextBlack"
+                android:layout_marginLeft="@dimen/Size10dp"
+                android:letterSpacing="0.1"
+                android:textSize="@dimen/Size20dp"
+                android:textColor="@color/colorTextBlack"
+                android:text="Campos obligatorios"
+                android:gravity="center_horizontal|center_vertical"
+                />
+        </LinearLayout>
         <TextView
             android:id="@+id/log"
             android:layout_width="match_parent"
