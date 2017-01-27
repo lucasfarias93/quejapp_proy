@@ -18,4 +18,7 @@
     <string name="actualizar_data">Actualizar datos</string>
     <string name="cancelar_actualizar">Cancelar</string>
     <string name="campos_obligatorios">Campos obligatorios</string>
+    <string name="actualice_datos_sensibles"><u>Actualice su usuario y contraseña</u></string>
+    <string name="actualice_datos_personales"><u>Actualice sus datos personales</u></string>
+    <string name="actualizacion_datos"><u>Actualización de datos</u></string>
 </resources>

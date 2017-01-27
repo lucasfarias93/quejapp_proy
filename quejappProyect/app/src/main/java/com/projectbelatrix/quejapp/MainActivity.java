@@ -1,6 +1,7 @@
 package com.projectbelatrix.quejapp;
 
         import android.content.Intent;
+        import android.content.res.Configuration;
         import android.graphics.Typeface;
         import android.support.v7.app.AppCompatActivity;
         import android.os.Bundle;
@@ -53,9 +54,11 @@ public class MainActivity extends AppCompatActivity {
                 if (pass.equals(password)) {
                     Toast mensaje = Toast.makeText(MainActivity.this, "LO LOGRASTE WACHIN!", Toast.LENGTH_LONG);
                     mensaje.show();
+
                     usr.setText("");
                     pwd.setText("");
                     Intent i = new Intent(MainActivity.this, TabsActivity.class);
+                    i.putExtra("usuario", user);
                     startActivity(i);
 
                 } else {

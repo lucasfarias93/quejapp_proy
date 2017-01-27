@@ -18,7 +18,8 @@
         <activity android:name=".TabsActivity" />
         <activity android:name=".Register" />
         <activity android:name=".FormularioActivity" />
-        <activity android:name=".UsuarioPerfilActivity"></activity>
+        <activity android:name=".UsuarioPerfilActivity" />
+        <activity android:name=".EditProfileActivity"></activity>
     </application>
 
 </manifest>

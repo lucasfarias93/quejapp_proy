@@ -94,13 +94,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String a;
         if(cursor.moveToFirst()){
             do{
-                a = cursor.getString(0);
+                a = cursor.getString(3);
                 if(a.equals(user)){
-                    usuario.setUsername(cursor.getString(0));
-                    usuario.setPassword(cursor.getString(1));
-                    usuario.setNombre(cursor.getString(2));
-                    usuario.setApellido(cursor.getString(3));
-                    usuario.setEmail(cursor.getString(4));
+                    usuario.setUsername(cursor.getString(3));
+                    usuario.setPassword(cursor.getString(4));
+                    usuario.setNombre(cursor.getString(0));
+                    usuario.setApellido(cursor.getString(1));
+                    usuario.setEmail(cursor.getString(2));
                 }
             } while (cursor.moveToNext());
             return usuario;

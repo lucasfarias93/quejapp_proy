@@ -20,11 +20,14 @@ public class TabsActivity extends AppCompatActivity implements ViewPager.OnPageC
     private FragmentTabHost tabHost;
     private Toolbar toolbar;
     ViewPager viewPager;
+    String user_data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tabs);
+        Intent m = getIntent();
+        user_data = m.getStringExtra("usuario");
         InitViewpager();
         InitTabHost();
            }
@@ -67,6 +70,7 @@ public class TabsActivity extends AppCompatActivity implements ViewPager.OnPageC
         int id = item.getItemId();
         if (id==R.id.miPerfil) {
             Intent i = new Intent(TabsActivity.this, UsuarioPerfilActivity.class);
+            i.putExtra("usuario", user_data);
             startActivity(i);
         }
         if (id==R.id.desloguearse) {
