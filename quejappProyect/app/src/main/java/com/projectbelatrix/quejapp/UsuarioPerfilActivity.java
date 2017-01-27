@@ -46,7 +46,7 @@ public class UsuarioPerfilActivity extends Activity {
     }
 
     public void llamarActualizar(View v){
-        User usuario_actualizar = null;
+        User usuario_actualizar = new User();
         usuario_actualizar.setNombre(textNombre.getText().toString());
         usuario_actualizar.setApellido(textApellido.getText().toString());
         usuario_actualizar.setUsername(textUsuario.getText().toString());
@@ -54,7 +54,7 @@ public class UsuarioPerfilActivity extends Activity {
         usuario_actualizar.setEmail(textMail.getText().toString());
 
         if(textUsuario.getText().toString() != "" && textPassword.getText().toString() != ""){
-            helper.insertUser(usuario_actualizar);
+            helper.onUpdate(usuario_actualizar);
         } else {
             Toast.makeText(this, "Has dejado el usuario o la contraseña vacios. Completa los campos", Toast.LENGTH_LONG).show();
         }

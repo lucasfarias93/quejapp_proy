@@ -49,6 +49,30 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.insert(TABLE_NAME , null , values);
         db.close();
     }
+
+    public void onUpdate(User u) {
+        db = this.getWritableDatabase();
+        String query = "select usuario from " + TABLE_NAME;
+        Cursor cursor = db.rawQuery(query, null);
+        String a;
+        int id = cursor.getCount();
+        if (cursor.moveToFirst()) {
+            do {
+                a = cursor.getString(0);
+                if (a.equals(u.getUsername())) {
+                    ContentValues values = new ContentValues();
+                    values.put(COLUMN_NOMBRE, u.getNombre());
+                    values.put(COLUMN_APELLIDO, u.getApellido());
+                    values.put(COLUMN_EMAIL, u.getEmail());
+                    values.put(COLUMN_USUARIO, u.getUsername());
+                    values.put(COLUMN_CONTRASEÑA, u.getPassword());
+
+                    db.update(TABLE_NAME, values, "ID="+id, null);
+                    db.close();
+                }
+            } while (cursor.moveToNext());
+        }
+    }
     public boolean validateUser(String user) {
         boolean valor = false;
         db = this.getReadableDatabase();
@@ -85,7 +109,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
         return b;
     }
-
     public User getProfileData(String user){
         User usuario = new User();
         db = this.getReadableDatabase();
@@ -107,7 +130,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
         return null;
     }
-
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
          String query = "DROP TABLE IF EXISTS "+TABLE_NAME;
