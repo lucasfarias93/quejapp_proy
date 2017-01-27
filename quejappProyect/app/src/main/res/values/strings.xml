@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">quejapp</string>
+    <string name="app_name">QuejApp</string>
     <string name="text1">Este es un Texto de ejemplo</string>
     <string name="text2">Este es un Texto de ejemplo para cada tab</string>
     <string name="button1">Click para ver los tabs</string>
@@ -17,5 +17,5 @@
     <string name="datos_personales">Los datos personales de usuario</string>
     <string name="actualizar_data">Actualizar datos</string>
     <string name="cancelar_actualizar">Cancelar</string>
-    <string name="campos_obligatorios">*</string>
+    <string name="campos_obligatorios">Campos obligatorios</string>
 </resources>

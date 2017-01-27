@@ -11,6 +11,8 @@ import org.w3c.dom.Text;
 public class UsuarioPerfilActivity extends Activity {
 
     private TextView actualziarDatos, cancelarActualizar, textMail, textNombre, textAppellido, textUsuario, textPassword;
+    private String usr;
+    DatabaseHelper helper = new DatabaseHelper(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +27,17 @@ public class UsuarioPerfilActivity extends Activity {
         textUsuario = (TextView) findViewById(R.id.user);
         textPassword = (TextView) findViewById(R.id.pwd);
 
+        showProfileData(usr); //Esta chagar es null, ¿Como consigo la referencia al user logueado actualmente?
+    }
+
+    public void showProfileData(String usuario){
+        User usuarioLogueado;
+        usuarioLogueado = helper.getProfileData(usuario);
+        textNombre.setText(usuarioLogueado.getNombre());
+        textAppellido.setText(usuarioLogueado.getApellido());
+        textMail.setText(usuarioLogueado.getEmail());
+        textUsuario.setText(usuarioLogueado.getUsername());
+        textPassword.setText(usuarioLogueado.getPassword());
     }
 
     public void llamarActualizar(View v){

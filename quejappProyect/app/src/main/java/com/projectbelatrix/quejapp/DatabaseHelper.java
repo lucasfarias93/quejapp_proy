@@ -85,6 +85,29 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
         return b;
     }
+
+    public User getProfileData(String user){
+        User usuario = new User();
+        db = this.getReadableDatabase();
+        String query = " select nombre , apellido , email , usuario , contraseña from " + TABLE_NAME;
+        Cursor cursor = db.rawQuery(query, null);
+        String a;
+        if(cursor.moveToFirst()){
+            do{
+                a = cursor.getString(0);
+                if(a.equals(user)){
+                    usuario.setUsername(cursor.getString(0));
+                    usuario.setPassword(cursor.getString(1));
+                    usuario.setNombre(cursor.getString(2));
+                    usuario.setApellido(cursor.getString(3));
+                    usuario.setEmail(cursor.getString(4));
+                }
+            } while (cursor.moveToNext());
+            return usuario;
+        }
+        return null;
+    }
+
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
          String query = "DROP TABLE IF EXISTS "+TABLE_NAME;
