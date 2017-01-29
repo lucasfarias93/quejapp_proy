@@ -35,7 +35,7 @@
                     android:background="#00000000"
                     android:letterSpacing="0.1"
                     android:textSize="@dimen/Size16dp"
-                    android:inputType="text"
+                    android:inputType="textEmailAddress"
                     android:textColor="@color/colorTextBlack"
                     />
             </LinearLayout>

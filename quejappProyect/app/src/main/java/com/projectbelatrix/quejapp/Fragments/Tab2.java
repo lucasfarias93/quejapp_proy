@@ -1,10 +1,12 @@
-package com.projectbelatrix.quejapp;
+package com.projectbelatrix.quejapp.Fragments;
 
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.projectbelatrix.quejapp.R;
 
 /**
  * Created by LUCAS on 23/01/2017.

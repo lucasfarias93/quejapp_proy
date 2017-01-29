@@ -1,6 +1,5 @@
-package com.projectbelatrix.quejapp;
+package com.projectbelatrix.quejapp.Fragments;
 
-import android.content.Context;
 import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
@@ -8,9 +7,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.Toast;
 
-import java.text.Normalizer;
+import com.projectbelatrix.quejapp.Activities.FormularioActivity;
+import com.projectbelatrix.quejapp.R;
 
 /**
  * Created by LUCAS on 23/01/2017.

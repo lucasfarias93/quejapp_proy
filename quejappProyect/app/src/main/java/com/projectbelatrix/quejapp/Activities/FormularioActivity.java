@@ -1,7 +1,9 @@
-package com.projectbelatrix.quejapp;
+package com.projectbelatrix.quejapp.Activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.projectbelatrix.quejapp.R;
 
 public class FormularioActivity extends AppCompatActivity {
 

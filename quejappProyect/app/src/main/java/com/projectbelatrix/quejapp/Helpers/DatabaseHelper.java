@@ -1,10 +1,12 @@
-package com.projectbelatrix.quejapp;
+package com.projectbelatrix.quejapp.Helpers;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+
+import com.projectbelatrix.quejapp.Class.User;
 
 /**
  * Created by Elias on 24/01/2017.
@@ -50,7 +52,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.close();
     }
 
-    public void onUpdate(User u) {
+    public void onUpdate(User u, String user) {
         db = this.getWritableDatabase();
         String query = "select usuario from " + TABLE_NAME;
         Cursor cursor = db.rawQuery(query, null);
@@ -59,7 +61,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         if (cursor.moveToFirst()) {
             do {
                 a = cursor.getString(0);
-                if (a.equals(u.getUsername())) {
+                if (a.equals(user)) {
                     ContentValues values = new ContentValues();
                     values.put(COLUMN_NOMBRE, u.getNombre());
                     values.put(COLUMN_APELLIDO, u.getApellido());
@@ -67,7 +69,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     values.put(COLUMN_USUARIO, u.getUsername());
                     values.put(COLUMN_CONTRASEÑA, u.getPassword());
 
-                    db.update(TABLE_NAME, values, "ID="+id, null);
+                    insertUser(u);
+                    //db.update(TABLE_NAME, values, "ID="+id, null);
                     db.close();
                 }
             } while (cursor.moveToNext());

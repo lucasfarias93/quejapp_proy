@@ -1,7 +1,6 @@
-package com.projectbelatrix.quejapp;
+package com.projectbelatrix.quejapp.Activities;
 
         import android.content.Intent;
-        import android.content.res.Configuration;
         import android.graphics.Typeface;
         import android.support.v7.app.AppCompatActivity;
         import android.os.Bundle;
@@ -11,6 +10,9 @@ package com.projectbelatrix.quejapp;
         import android.widget.EditText;
         import android.widget.TextView;
         import android.widget.Toast;
+
+        import com.projectbelatrix.quejapp.Helpers.DatabaseHelper;
+        import com.projectbelatrix.quejapp.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -40,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent i = new Intent(MainActivity.this, Register.class);
+                Intent i = new Intent(MainActivity.this, RegisterActivity.class);
                 startActivity(i);
             }
         });

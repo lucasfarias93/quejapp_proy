@@ -1,4 +1,4 @@
-package com.projectbelatrix.quejapp;
+package com.projectbelatrix.quejapp.Class;
 
 /**
  * Created by Elias on 24/01/2017.

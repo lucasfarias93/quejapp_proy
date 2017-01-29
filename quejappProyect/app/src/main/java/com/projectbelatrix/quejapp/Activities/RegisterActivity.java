@@ -1,19 +1,25 @@
-package com.projectbelatrix.quejapp;
+package com.projectbelatrix.quejapp.Activities;
 
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class Register extends AppCompatActivity {
-    TextView reg,log;
-    EditText user,pwd,mail,name,apell;
+import com.projectbelatrix.quejapp.Class.User;
+import com.projectbelatrix.quejapp.Helpers.DatabaseHelper;
+import com.projectbelatrix.quejapp.R;
+import com.projectbelatrix.quejapp.utils.ValidatorClass;
+
+
+public class RegisterActivity extends AppCompatActivity {
+    TextView reg, log;
+    EditText user, pwd, mail, name, apell;
     DatabaseHelper helper = new DatabaseHelper(this);
+
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,33 +56,32 @@ public class Register extends AppCompatActivity {
                 u.setEmail(emailString);
                 u.setPassword(contraseñaString);
                 u.setUsername(usuarioString);
-                validarCampos(usuarioString, contraseñaString, u);
+                validarCampos(usuarioString, contraseñaString, emailString, u);
             }
         });
 
         log.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(Register.this, MainActivity.class);
+                Intent i = new Intent(RegisterActivity.this, MainActivity.class);
                 startActivity(i);
             }
         });
 
     }
 
-    public void validarCampos(String user, String contraseña, User u){
-
-        if (helper.validateUser(user)) {
-            Toast.makeText(Register.this, "El usuario ya existe, intente loguearse", Toast.LENGTH_LONG).show();
+    public void validarCampos(String user, String contraseña, String email, User u) {
+        if (!ValidatorClass.validarEmail(email)) {
+            Toast.makeText(RegisterActivity.this, "El formato de email introducido no es correcto o esta vacio, intente nuevamente", Toast.LENGTH_LONG).show();
+        } else if (ValidatorClass.validarEmail(email) && (contraseña + user).equals("")) {
+            Toast.makeText(RegisterActivity.this, "Debe completar los campos obligatorios", Toast.LENGTH_LONG).show();
+        } else if (ValidatorClass.validarEmail(email) && !((contraseña + user).equals("")) && (helper.validateUser(user))) {
+            Toast.makeText(RegisterActivity.this, "El usuario ya existe, pruebe con otro nombre de usuario", Toast.LENGTH_LONG).show();
         } else {
             helper.insertUser(u);
-            if ((contraseña + user).equals("")) {
-                Toast msj = Toast.makeText(Register.this, "Debe completar los campos obligatorios", Toast.LENGTH_LONG);
-                msj.show();
-            } else {
-                Intent i = new Intent(Register.this, MainActivity.class);
-                startActivity(i);
-            }
+            Intent i = new Intent(RegisterActivity.this, MainActivity.class);
+            startActivity(i);
         }
     }
+
 }

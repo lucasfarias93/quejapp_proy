@@ -1,4 +1,4 @@
-package com.projectbelatrix.quejapp;
+package com.projectbelatrix.quejapp.Activities;
 
 import android.content.Intent;
 import android.support.v4.app.Fragment;
@@ -11,6 +11,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TabHost;
 import android.widget.Toast;
+
+import com.projectbelatrix.quejapp.Adapters.MyFragmentPageAdapter;
+import com.projectbelatrix.quejapp.R;
+import com.projectbelatrix.quejapp.Fragments.Tab1;
+import com.projectbelatrix.quejapp.Fragments.Tab2;
+import com.projectbelatrix.quejapp.Fragments.Tab3;
 
 import java.util.ArrayList;
 import java.util.List;

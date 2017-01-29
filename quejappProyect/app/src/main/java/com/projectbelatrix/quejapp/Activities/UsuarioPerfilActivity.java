@@ -1,4 +1,4 @@
-package com.projectbelatrix.quejapp;
+package com.projectbelatrix.quejapp.Activities;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -8,7 +8,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
+import com.projectbelatrix.quejapp.Class.User;
+import com.projectbelatrix.quejapp.Helpers.DatabaseHelper;
+import com.projectbelatrix.quejapp.R;
+import com.projectbelatrix.quejapp.utils.ValidatorClass;
 
 public class UsuarioPerfilActivity extends Activity {
 
@@ -43,6 +46,8 @@ public class UsuarioPerfilActivity extends Activity {
         textMail.setText(usuarioLogueado.getEmail());
         textUsuario.setText(usuarioLogueado.getUsername());
         textPassword.setText(usuarioLogueado.getPassword());
+
+
     }
 
     public void llamarActualizar(View v){
@@ -52,11 +57,17 @@ public class UsuarioPerfilActivity extends Activity {
         usuario_actualizar.setUsername(textUsuario.getText().toString());
         usuario_actualizar.setPassword(textPassword.getText().toString());
         usuario_actualizar.setEmail(textMail.getText().toString());
+        String usuario = textUsuario.getText().toString();
+        String contraseña = textPassword.getText().toString();
 
-        if(textUsuario.getText().toString() != "" && textPassword.getText().toString() != ""){
-            helper.onUpdate(usuario_actualizar);
+        if (!ValidatorClass.validarEmail(textMail.getText().toString())) {
+            Toast.makeText(UsuarioPerfilActivity.this, "El formato de email introducido no es correcto o esta vacio, intente nuevamente", Toast.LENGTH_LONG).show();
+        } else if (ValidatorClass.validarEmail(textMail.getText().toString()) && ((usuario.equals("") || (contraseña).equals("")))) {
+            Toast.makeText(UsuarioPerfilActivity.this, "Ha dejado el usuario o la contraseña vacios", Toast.LENGTH_LONG).show();
         } else {
-            Toast.makeText(this, "Has dejado el usuario o la contraseña vacios. Completa los campos", Toast.LENGTH_LONG).show();
+            helper.onUpdate(usuario_actualizar, usr);
+            helper.getProfileData(usuario_actualizar.getUsername());
+            finish();
         }
     }
 }

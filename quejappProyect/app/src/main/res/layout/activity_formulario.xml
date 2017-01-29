@@ -8,7 +8,7 @@
     android:paddingRight="16dp"
     android:paddingTop="16dp"
     android:background="@drawable/background_image_tabs_180"
-    tools:context="com.projectbelatrix.quejapp.FormularioActivity">
+    tools:context=".Activities.FormularioActivity">
 
     <TextView
         android:layout_width="match_parent"

@@ -1,4 +1,4 @@
-package com.projectbelatrix.quejapp;
+package com.projectbelatrix.quejapp.Adapters;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
