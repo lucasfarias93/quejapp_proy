@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.projectbelatrix.quejapp.reclamo1">
+
+
+    <TextView
+        android:text="Ubicacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ubicacion"
+        android:textSize="17dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:layout_alignBottom="@+id/editUbicacion"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+    android:text="Elementos sustraidos"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="27dp"
+    android:textSize="17dp"
+    android:gravity="center_horizontal|center_vertical"
+    android:id="@+id/Elementos"
+        android:layout_below="@+id/ubicacion"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Hora del robo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Elementos"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="27dp"
+        android:textSize="17dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:id="@+id/HoraRobo" />
+
+    <TextView
+        android:text="Valor sustraido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/HoraRobo"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="27dp"
+        android:textSize="17dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:id="@+id/valorPerdida" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_marginLeft="20dp"
+        android:hint="Localidad,calle,numero"
+        android:id="@+id/editUbicacion"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/editElementos"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_marginLeft="20dp"
+        android:hint="Listar elementos aqui"
+        android:id="@+id/editElementos"
+        android:layout_alignBottom="@+id/Elementos"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_marginLeft="20dp"
+        android:hint="Hora aproximada"
+        android:id="@+id/editValor"
+        android:layout_alignBaseline="@+id/HoraRobo"
+        android:layout_alignBottom="@+id/HoraRobo"
+        android:layout_toEndOf="@+id/valorPerdida" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_marginLeft="20dp"
+        android:hint="Valor aproximado"
+        android:id="@+id/editHora"
+        android:layout_alignBaseline="@+id/valorPerdida"
+        android:layout_alignBottom="@+id/valorPerdida"
+        android:layout_alignStart="@+id/editValor" />
+
+
+</RelativeLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tipo_reclamo">
+        <item>Seleccion un reclamo</item>
+        <item>Robo</item>
+        <item>Vialidad</item>
+        <item>Otros</item>
+    </string-array>
+    </resources>

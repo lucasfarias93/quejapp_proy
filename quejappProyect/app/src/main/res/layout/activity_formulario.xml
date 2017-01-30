@@ -9,6 +9,7 @@
     android:paddingTop="16dp"
     android:background="@drawable/background_image_tabs_180"
     tools:context=".Activities.FormularioActivity">
+    >
 
     <TextView
         android:layout_width="match_parent"
@@ -67,4 +68,18 @@
         android:layout_toRightOf="@id/button_blank"
         android:background="@drawable/background_button_blue_white"/>
 
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/button_confirm"
+        android:layout_marginTop="30dp"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp"
+        tools:context=".Activities.FormularioActivity"
+        android:id="@+id/activityContainer"
+        android:orientation="horizontal">
+    </LinearLayout>
 </RelativeLayout>
