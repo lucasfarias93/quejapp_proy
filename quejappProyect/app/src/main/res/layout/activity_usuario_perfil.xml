@@ -34,7 +34,7 @@
                     android:letterSpacing="0.1"
                     android:hint="@string/direccion_de_correo"
                     android:textColorHint="@color/colorTextHint"
-                    android:textSize="@dimen/Size10dp"
+                    android:textSize="@dimen/Size12dp"
                     android:inputType="textEmailAddress"
                     android:textColor="@color/colorTextBlack"
                     />
@@ -63,7 +63,7 @@
                     android:layout_marginLeft="@dimen/Size15dp"
                     android:background="#00000000"
                     android:letterSpacing="0.1"
-                    android:textSize="@dimen/Size10dp"
+                    android:textSize="@dimen/Size12dp"
                     android:inputType="text"
                     android:textColor="@color/colorTextBlack"
                     />
@@ -96,7 +96,7 @@
                     android:layout_marginLeft="@dimen/Size15dp"
                     android:background="#00000000"
                     android:letterSpacing="0.1"
-                    android:textSize="@dimen/Size10dp"
+                    android:textSize="@dimen/Size12dp"
                     android:inputType="text"
                     android:textColor="@color/colorTextBlack"
                     />
@@ -124,7 +124,7 @@
                     android:layout_marginLeft="@dimen/Size15dp"
                     android:background="#00000000"
                     android:letterSpacing="0.1"
-                    android:textSize="@dimen/Size10dp"
+                    android:textSize="@dimen/Size12dp"
                     android:inputType="text"
                     android:textColor="@color/colorTextBlack"
                     />
@@ -153,7 +153,7 @@
                     android:background="#00000000"
                     android:inputType="textPassword"
                     android:letterSpacing="0.1"
-                    android:textSize="@dimen/Size10dp"
+                    android:textSize="@dimen/Size12dp"
                     android:textColor="@color/colorTextBlack"
                     />
             </LinearLayout>
@@ -200,7 +200,7 @@
             android:text="@string/actualizar_data"
             android:textColor="@color/colorTextWhite"
             android:textStyle="bold"
-            android:textSize="@dimen/Size10dp"
+            android:textSize="@dimen/Size12dp"
             android:gravity="center"
             android:layout_gravity="bottom"
             android:padding="@dimen/Size16dp"
@@ -214,7 +214,7 @@
             android:layout_height="@dimen/Size50dp"
             android:background="@drawable/background_button_blue_white"
             android:text="@string/cancelar_actualizar"
-            android:textSize="@dimen/Size10dp"
+            android:textSize="@dimen/Size12dp"
             android:textColor="@color/colorTextWhite"
             android:textStyle="bold"
             android:gravity="center"
@@ -222,6 +222,8 @@
             android:padding="@dimen/Size16dp"
             android:layout_marginBottom="@dimen/Size40dp"
             android:letterSpacing="0.2"
+            android:onClick="cancelarActualizar"
             />
     </LinearLayout>
 </RelativeLayout>
+

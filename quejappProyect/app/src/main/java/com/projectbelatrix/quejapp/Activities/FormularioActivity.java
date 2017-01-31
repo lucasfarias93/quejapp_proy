@@ -1,16 +1,29 @@
 package com.projectbelatrix.quejapp.Activities;
 
+
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
+
 import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.support.v4.app.Fragment;
+
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+
+import android.widget.Spinner;
+
+import com.projectbelatrix.quejapp.R;
+import com.projectbelatrix.quejapp.Fragments.Reclamo1Fragment;
+import com.projectbelatrix.quejapp.Fragments.Reclamo2Fragment;
+import com.projectbelatrix.quejapp.Fragments.Reclamo3Fragment;
+
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
 
@@ -21,6 +34,7 @@ import com.projectbelatrix.quejapp.R;
 import com.projectbelatrix.quejapp.reclamo1;
 import com.projectbelatrix.quejapp.reclamo2;
 import com.projectbelatrix.quejapp.reclamo3;
+
 
 public class FormularioActivity extends AppCompatActivity {
 
@@ -50,19 +64,19 @@ public class FormularioActivity extends AppCompatActivity {
                         break;
                     case(1):
                         FragmentTransaction transaction = fragmentManager.beginTransaction();
-                        reclamo1 fragment = new reclamo1();
+                        Reclamo1Fragment fragment = new Reclamo1Fragment();
                         transaction.replace(R.id.activityContainer, fragment);
                         transaction.commit();
                         break;
                     case(2):
                         transaction = fragmentManager.beginTransaction();
-                        reclamo2 fragment2 = new reclamo2();
+                        Reclamo2Fragment fragment2 = new Reclamo2Fragment();
                         transaction.replace(R.id.activityContainer, fragment2);
                         transaction.commit();
                         break;
                     case(3):
                         transaction = fragmentManager.beginTransaction();
-                        reclamo3 fragment3 = new reclamo3();
+                        Reclamo3Fragment fragment3 = new Reclamo3Fragment();
                         transaction.replace(R.id.activityContainer, fragment3);
                         transaction.commit();
                         break;

@@ -14,9 +14,9 @@ import android.widget.Toast;
 
 import com.projectbelatrix.quejapp.Adapters.MyFragmentPageAdapter;
 import com.projectbelatrix.quejapp.R;
-import com.projectbelatrix.quejapp.Fragments.Tab1;
-import com.projectbelatrix.quejapp.Fragments.Tab2;
-import com.projectbelatrix.quejapp.Fragments.Tab3;
+import com.projectbelatrix.quejapp.Fragments.Tab1Fragment;
+import com.projectbelatrix.quejapp.Fragments.Tab2Fragment;
+import com.projectbelatrix.quejapp.Fragments.Tab3Fragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,9 +46,9 @@ public class TabsActivity extends AppCompatActivity implements ViewPager.OnPageC
         tabHost= (FragmentTabHost) findViewById(android.R.id.tabhost);
         tabHost.setup(this,getSupportFragmentManager(),android.R.id.tabcontent);
 
-        tabHost.addTab(tabHost.newTabSpec("tab1").setIndicator("¿Que desea hacer?"),Tab1.class, null);
-        tabHost.addTab(tabHost.newTabSpec("tab2").setIndicator("Historial de reclamos"),Tab2.class, null);
-        tabHost.addTab(tabHost.newTabSpec("tab3").setIndicator("Más sobre Quejapp"),Tab3.class, null);
+        tabHost.addTab(tabHost.newTabSpec("tab1").setIndicator("¿Que desea hacer?"),Tab1Fragment.class, null);
+        tabHost.addTab(tabHost.newTabSpec("tab2").setIndicator("Historial de reclamos"),Tab2Fragment.class, null);
+        tabHost.addTab(tabHost.newTabSpec("tab3").setIndicator("Más sobre Quejapp"),Tab3Fragment.class, null);
         tabHost.setOnTabChangedListener(this);
     }
 
@@ -56,9 +56,9 @@ public class TabsActivity extends AppCompatActivity implements ViewPager.OnPageC
 
         viewPager = (ViewPager) findViewById(R.id.view_pager);
         List<Fragment> listFragments = new ArrayList<>();
-        listFragments.add(new Tab1());
-        listFragments.add(new Tab2());
-        listFragments.add(new Tab3());
+        listFragments.add(new Tab1Fragment());
+        listFragments.add(new Tab2Fragment());
+        listFragments.add(new Tab3Fragment());
 
         MyFragmentPageAdapter myFragmentPageAdapter = new MyFragmentPageAdapter(getSupportFragmentManager(),listFragments);
         viewPager.setAdapter(myFragmentPageAdapter);

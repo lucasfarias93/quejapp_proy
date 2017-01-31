@@ -3,6 +3,7 @@ package com.projectbelatrix.quejapp.Activities;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -67,7 +68,17 @@ public class UsuarioPerfilActivity extends Activity {
         } else {
             helper.onUpdate(usuario_actualizar, usr);
             helper.getProfileData(usuario_actualizar.getUsername());
-            finish();
+            Toast.makeText(this, "Los cambios se guardaron con exito", Toast.LENGTH_LONG).show();
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    finish();
+                }
+            }, 1000);
+
         }
+    }
+    public void cancelarActualizar(View v){
+        finish();
     }
 }

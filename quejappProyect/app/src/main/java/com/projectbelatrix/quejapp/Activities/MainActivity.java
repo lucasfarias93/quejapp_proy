@@ -1,18 +1,19 @@
 package com.projectbelatrix.quejapp.Activities;
 
-        import android.content.Intent;
-        import android.graphics.Typeface;
-        import android.support.v7.app.AppCompatActivity;
-        import android.os.Bundle;
-        import android.view.View;
-        import android.view.Window;
-        import android.view.WindowManager;
-        import android.widget.EditText;
-        import android.widget.TextView;
-        import android.widget.Toast;
+import android.content.Intent;
+import android.graphics.Typeface;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
-        import com.projectbelatrix.quejapp.Helpers.DatabaseHelper;
-        import com.projectbelatrix.quejapp.R;
+import com.projectbelatrix.quejapp.AlertDialog.SimpleDialog;
+import com.projectbelatrix.quejapp.Helpers.DatabaseHelper;
+import com.projectbelatrix.quejapp.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -64,8 +65,7 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(i);
 
                 } else {
-                    Toast error = Toast.makeText(MainActivity.this, "Pass o usuarios Incorrectos ", Toast.LENGTH_LONG);
-                    error.show();
+                    new SimpleDialog().show(getFragmentManager(), "SimpleDialog");
                 }
             }
         });

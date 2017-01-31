@@ -14,11 +14,14 @@
     <dimen name="Size1dp">1dp</dimen>
     <dimen name="Size50dp">50dp</dimen>
     <dimen name="Size400dp">400dp</dimen>
+    <dimen name="Size500dp">500dp</dimen>
     <dimen name="SizeLogo1">120dp</dimen>
     <dimen name="SizeLogo2">243dp</dimen>
     <dimen name="Size100dp">100dp</dimen>
     <dimen name="SizeMargin570dp">570dp</dimen>
     <dimen name="SizeWidthButton_150dp">150dp</dimen>
     <dimen name="SizeHeightButton_75dp">75dp</dimen>
+    <dimen name="Size200dp">200dp</dimen>
+    <dimen name="Size120dp">120dp</dimen>
 
 </resources>

@@ -2,97 +2,129 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.projectbelatrix.quejapp.reclamo1">
+    tools:context=".Fragments.Reclamo1Fragment">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:paddingLeft="@dimen/Size5dp"
+        android:paddingRight="@dimen/Size5dp">
 
-    <TextView
-        android:text="Ubicacion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/ubicacion"
-        android:textSize="17dp"
-        android:gravity="center_horizontal|center_vertical"
-        android:layout_alignBottom="@+id/editUbicacion"
-        android:layout_alignParentTop="true" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <TextView
-    android:text="Elementos sustraidos"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="27dp"
-    android:textSize="17dp"
-    android:gravity="center_horizontal|center_vertical"
-    android:id="@+id/Elementos"
-        android:layout_below="@+id/ubicacion"
-        android:layout_alignParentStart="true" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/Size20dp">
+                <TextView
+                    android:id="@+id/ubicacion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/editUbicacion"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="Ubicacion"
+                    android:textSize="@dimen/Size12dp" />
 
-    <TextView
-        android:text="Hora del robo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/Elementos"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="27dp"
-        android:textSize="17dp"
-        android:gravity="center_horizontal|center_vertical"
-        android:id="@+id/HoraRobo" />
+                <EditText
+                    android:id="@+id/editUbicacion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignStart="@+id/editElementos"
+                    android:layout_marginLeft="100dp"
+                    android:hint="@string/escriba_aqui"
+                    android:inputType="textPersonName"
+                    android:textSize="@dimen/Size12dp" />
+            </LinearLayout>
 
-    <TextView
-        android:text="Valor sustraido"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/HoraRobo"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="27dp"
-        android:textSize="17dp"
-        android:gravity="center_horizontal|center_vertical"
-        android:id="@+id/valorPerdida" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/Size16dp">
+                <TextView
+                    android:id="@+id/Elementos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/ubicacion"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="Elementos sustraidos"
+                    android:textSize="@dimen/Size12dp" />
+                <EditText
+                    android:id="@+id/editElementos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/Elementos"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginLeft="50dp"
+                    android:hint="@string/escriba_aqui"
+                    android:inputType="textPersonName"
+                    android:textSize="@dimen/Size12dp" />
+            </LinearLayout>
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:layout_marginLeft="20dp"
-        android:hint="Localidad,calle,numero"
-        android:id="@+id/editUbicacion"
-        android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/editElementos"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/Size16dp">
+                <TextView
+                    android:id="@+id/HoraRobo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/Elementos"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="Hora del robo"
+                    android:textSize="@dimen/Size12dp" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:layout_marginLeft="20dp"
-        android:hint="Listar elementos aqui"
-        android:id="@+id/editElementos"
-        android:layout_alignBottom="@+id/Elementos"
-        android:layout_alignParentEnd="true" />
+                <EditText
+                    android:id="@+id/editHora"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/valorPerdida"
+                    android:layout_alignBottom="@+id/valorPerdida"
+                    android:layout_alignStart="@+id/editValor"
+                    android:layout_marginLeft="100dp"
+                    android:hint="@string/escriba_aqui"
+                    android:inputType="textPersonName"
+                    android:textSize="@dimen/Size12dp" />
+            </LinearLayout>
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:layout_marginLeft="20dp"
-        android:hint="Hora aproximada"
-        android:id="@+id/editValor"
-        android:layout_alignBaseline="@+id/HoraRobo"
-        android:layout_alignBottom="@+id/HoraRobo"
-        android:layout_toEndOf="@+id/valorPerdida" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/Size16dp">
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:layout_marginLeft="20dp"
-        android:hint="Valor aproximado"
-        android:id="@+id/editHora"
-        android:layout_alignBaseline="@+id/valorPerdida"
-        android:layout_alignBottom="@+id/valorPerdida"
-        android:layout_alignStart="@+id/editValor" />
+                <TextView
+                    android:id="@+id/valorPerdida"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/HoraRobo"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="Valor sustraido"
+                    android:textSize="@dimen/Size12dp" />
 
-
+                <EditText
+                    android:id="@+id/editValor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/HoraRobo"
+                    android:layout_alignBottom="@+id/HoraRobo"
+                    android:layout_marginLeft="100dp"
+                    android:layout_toEndOf="@+id/valorPerdida"
+                    android:hint="@string/escriba_aqui"
+                    android:inputType="textPersonName"
+                    android:textSize="@dimen/Size12dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
 </RelativeLayout>

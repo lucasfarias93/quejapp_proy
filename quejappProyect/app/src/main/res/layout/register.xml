@@ -240,7 +240,7 @@
                 android:layout_marginBottom="5dp"
                 android:layout_marginLeft="30dp"
                 android:text="@string/campos_obligatorios"
-                android:textColor="@color/colorLayoutBlack"
+                android:textColor="@color/colorTextWhite"
                 android:letterSpacing="0.1"/>
         </LinearLayout>
         <TextView
@@ -254,3 +254,4 @@
             android:letterSpacing="0.1"/>
     </LinearLayout>
 </RelativeLayout>
+

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/Size200dp"
+    android:padding="@dimen/Size20dp"
+    android:background="@drawable/background_image_tabs_90">
+
+    <TextView
+        android:id="@+id/textLogin"
+        android:layout_width="match_parent"
+        android:textColor="@color/colorTextWhite"
+        android:layout_height="@dimen/Size20dp"
+        android:text="@string/login"
+        android:textSize="@dimen/Size16dp"
+        android:gravity="center_horizontal|center_vertical"/>
+    <TextView
+        android:id="@+id/text_incorrect"
+        android:layout_marginTop="@dimen/Size16dp"
+        android:textSize="@dimen/Size12dp"
+        android:textColor="@color/colorTextWhite"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/textLogin"
+        android:layout_height="@dimen/Size40dp"
+        android:text="@string/usuario_contraseña_incorrectos"
+        android:gravity="center_vertical|center_horizontal"/>
+    <!--android:layout_marginLeft="@dimen/Size30dp"-->
+
+    <Button
+        android:id="@+id/button_ok_dialog"
+        android:layout_marginTop="70dp"
+        android:textColor="@color/colorTextWhite"
+        android:layout_width="@dimen/Size40dp"
+        android:layout_height="@dimen/Size40dp"
+        android:text="@string/ok_button"
+        android:gravity="center"
+        android:layout_below="@+id/textLogin"
+        android:background="@drawable/background_button_blue_white"
+        android:layout_marginLeft="120dp"/>
+</RelativeLayout>

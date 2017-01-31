@@ -12,6 +12,7 @@
     <string name="ya_tienes_cuenta_logeate">Ya tienes cuenta? <u>Logeate</u></string>
     <string name="apellido">Apellido</string>
     <string name="nombre">Nombre</string>
+    <string name="usuario_contraseña_incorrectos">El usuario o la contraseña ingresados son incorrectos</string>
     <string name="eleccion_primer_tab">Por favor, eliga que desea realizar a continuación</string>
     <string name="usuario_y_contraseña_data">Los datos de usuario y contraseña</string>
     <string name="datos_personales">Los datos personales de usuario</string>
@@ -21,4 +22,9 @@
     <string name="actualice_datos_sensibles"><u>Actualice su usuario y contraseña</u></string>
     <string name="actualice_datos_personales"><u>Actualice sus datos personales</u></string>
     <string name="actualizacion_datos"><u>Actualización de datos</u></string>
+    <string name="ok_button">OK</string>
+    <string name="cancel_button">CANCEL</string>
+    <string name="confirmacion_actualizacion">¿Esta seguro que desea actualizar sus datos?</string>
+    <string name="confirmar_act_datos">Confirmación de actualizacion</string>
+    <string name="escriba_aqui">Escriba aqui</string>
 </resources>
