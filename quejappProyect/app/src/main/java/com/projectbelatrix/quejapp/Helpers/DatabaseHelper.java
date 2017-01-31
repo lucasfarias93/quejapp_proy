@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import com.projectbelatrix.quejapp.Class.Formulario;
 import com.projectbelatrix.quejapp.Class.User;
 
 /**
@@ -15,24 +16,36 @@ import com.projectbelatrix.quejapp.Class.User;
 public class DatabaseHelper extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 1;
     private static final String DATABASE_NAME = "Quejapp.db";
-    private static final String TABLE_NAME = "users";
-    private static final String COLUMN_NOMBRE = "nombre";
-    private static final String ID = "id";
-    private static final String COLUMN_APELLIDO = "apellido";
-    private static final String COLUMN_EMAIL = "email";
+    private static final String TABLE_NAME_USERS = "users";
+    private static final String COLUMN_NOMBRE_USER = "nombre";
+    private static final String ID_USER = "id";
+    private static final String COLUMN_APELLIDO_USER = "apellido";
+    private static final String COLUMN_EMAIL_USER = "email";
     private static final String COLUMN_USUARIO = "usuario";
     private static final String COLUMN_CONTRASEÑA = "contraseña";
+
+
+    private static final String TABLE_NAME_FORMULARIO = "formulario";
+    private static final String COLUMN_FORMULARIO_NOMBRE = "formulario_nombre";
+    private static final String COLUMN_MOTIVO = "motivo";
+    private static final String ID_FORMULARIO = "id_formulario";
+    private static final String COLUMN_DESCRIPCION = "descripcion";
+    private static final String COLUMN_HORA = "hora";
+    private static final String COLUMN_ASISTENCIA = "asistencia";
     SQLiteDatabase db;
-    private static final String TABLE_CREATE = "create table users (id integer primary key not null , " +
+    private static final String TABLE_CREATE_USERS = "create table users (id integer primary key not null , " +
             "nombre text not null , apellido text not null , email text not null , usuario text not null , contraseña text not null);";
 
+    private static final String TABLE_CREATE_FORMULARIO = "create table formulario (id integer primary key not null , " +
+            "formulario_nombre text not null , motivo text not null , descripcion text not null , hora text not null , asistencia text not null );";
     public DatabaseHelper (Context context) {
       super (context , DATABASE_NAME ,null , DATABASE_VERSION);
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
-          db.execSQL(TABLE_CREATE);
-          this.db = db;
+        db.execSQL(TABLE_CREATE_FORMULARIO);
+        db.execSQL(TABLE_CREATE_USERS);
+        this.db = db;
     }
     public void insertUser(User u){
         db = this.getWritableDatabase();
@@ -41,20 +54,20 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Cursor cursor = db.rawQuery(query , null);
         int count = cursor.getCount();
 
-        values.put (ID,count);
-        values.put (COLUMN_NOMBRE, u.getNombre());
-        values.put (COLUMN_APELLIDO, u.getApellido());
-        values.put (COLUMN_EMAIL, u.getEmail());
+        values.put (ID_USER,count);
+        values.put (COLUMN_NOMBRE_USER, u.getNombre());
+        values.put (COLUMN_APELLIDO_USER, u.getApellido());
+        values.put (COLUMN_EMAIL_USER, u.getEmail());
         values.put (COLUMN_USUARIO, u.getUsername());
         values.put (COLUMN_CONTRASEÑA, u.getPassword());
 
-        db.insert(TABLE_NAME , null , values);
+        db.insert(TABLE_NAME_USERS, null , values);
         db.close();
     }
 
     public void onUpdate(User u, String user) {
         db = this.getWritableDatabase();
-        String query = "select usuario from " + TABLE_NAME;
+        String query = "select usuario from " + TABLE_NAME_USERS;
         Cursor cursor = db.rawQuery(query, null);
         String a;
         int id = cursor.getCount();
@@ -63,14 +76,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 a = cursor.getString(0);
                 if (a.equals(user)) {
                     ContentValues values = new ContentValues();
-                    values.put(COLUMN_NOMBRE, u.getNombre());
-                    values.put(COLUMN_APELLIDO, u.getApellido());
-                    values.put(COLUMN_EMAIL, u.getEmail());
+                    values.put(COLUMN_NOMBRE_USER, u.getNombre());
+                    values.put(COLUMN_APELLIDO_USER, u.getApellido());
+                    values.put(COLUMN_EMAIL_USER, u.getEmail());
                     values.put(COLUMN_USUARIO, u.getUsername());
                     values.put(COLUMN_CONTRASEÑA, u.getPassword());
 
                     insertUser(u);
-                    //db.update(TABLE_NAME, values, "ID="+id, null);
                     db.close();
                 }
             } while (cursor.moveToNext());
@@ -79,7 +91,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public boolean validateUser(String user) {
         boolean valor = false;
         db = this.getReadableDatabase();
-        String query = "select usuario from " + TABLE_NAME;
+        String query = "select usuario from " + TABLE_NAME_USERS;
         Cursor cursor = db.rawQuery(query, null);
         String a;
 
@@ -97,7 +109,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public String searchPassword (String user){
 
        db = this.getReadableDatabase();
-        String query = " select usuario, contraseña from "+TABLE_NAME;
+        String query = " select usuario, contraseña from "+ TABLE_NAME_USERS;
         Cursor cursor = db.rawQuery(query , null);
         String a , b ;
         b = "not found";
@@ -115,7 +127,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public User getProfileData(String user){
         User usuario = new User();
         db = this.getReadableDatabase();
-        String query = " select nombre , apellido , email , usuario , contraseña from " + TABLE_NAME;
+        String query = " select nombre , apellido , email , usuario , contraseña from " + TABLE_NAME_USERS;
         Cursor cursor = db.rawQuery(query, null);
         String a;
         if(cursor.moveToFirst()){
@@ -135,7 +147,49 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-         String query = "DROP TABLE IF EXISTS "+TABLE_NAME;
+        String query = "DROP TABLE IF EXISTS "+ TABLE_NAME_USERS;
         db.execSQL(query);
+        String query1 = "DROP TABLE IF EXISTS " + TABLE_CREATE_FORMULARIO;
+        db.execSQL(query1);
+        onCreate(db);
+    }
+
+    public void insertFormulario(Formulario form){
+        db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        String query = " select * from users ";
+        Cursor cursor = db.rawQuery(query , null);
+        int count = cursor.getCount();
+
+        values.put (ID_FORMULARIO,count);
+        values.put (COLUMN_FORMULARIO_NOMBRE, form.getForm_nombre());
+        values.put (COLUMN_MOTIVO, form.getMotivo_reclamo());
+        values.put (COLUMN_DESCRIPCION, form.getDescripcion());
+        values.put (COLUMN_HORA, form.getHora_realizacion());
+        values.put (COLUMN_ASISTENCIA, form.getAsistencia());
+
+        db.insert(TABLE_NAME_FORMULARIO, null , values);
+        db.close();
+    }
+    public Formulario getFormularioData(String form_nombre){
+        Formulario form = new Formulario();
+        db = this.getReadableDatabase();
+        String query = " select formulario_nombre , motivo , descripcion , hora , asistencia from " + TABLE_NAME_FORMULARIO;
+        Cursor cursor = db.rawQuery(query, null);
+        String a;
+        if(cursor.moveToFirst()){
+            do{
+                a = cursor.getString(0);
+                if(a.equals(form_nombre)){
+                    form.setForm_nombre(cursor.getString(0));
+                    form.setMotivo_reclamo(cursor.getString(1));
+                    form.setDescripcion(cursor.getString(2));
+                    form.setHora_realizacion(cursor.getString(3));
+                    form.setAsistencia(cursor.getString(4));
+                }
+            } while (cursor.moveToNext());
+            return form;
+        }
+        return null;
     }
 }

@@ -5,6 +5,7 @@
     <dimen name="Size60dp">60dp</dimen>
     <dimen name="Size16dp">16dp</dimen>
     <dimen name="Size12dp">12dp</dimen>
+    <dimen name="Size2dp">2dp</dimen>
     <dimen name="Size5dp">5dp</dimen>
     <dimen name="Size40dp">40dp</dimen>
     <dimen name="Size30dp">30dp</dimen>
@@ -23,5 +24,8 @@
     <dimen name="SizeHeightButton_75dp">75dp</dimen>
     <dimen name="Size200dp">200dp</dimen>
     <dimen name="Size120dp">120dp</dimen>
-
+    <dimen name="Size300dp">300dp</dimen>
+    <dimen name="Size250dp">250dp</dimen>
+    <dimen name="Size80dp">80dp</dimen>
+    <dimen name="Size450dp">450dp</dimen>
 </resources>

@@ -19,6 +19,7 @@
         <activity android:name=".Activities.RegisterActivity" />
         <activity android:name=".Activities.FormularioActivity" />
         <activity android:name=".Activities.UsuarioPerfilActivity" />
+        <activity android:name=".Activities.GetFormDataActivity"></activity>
     </application>
 
 </manifest>

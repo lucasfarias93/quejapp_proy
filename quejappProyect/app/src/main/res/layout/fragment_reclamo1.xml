@@ -8,19 +8,44 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:paddingLeft="@dimen/Size5dp"
-        android:paddingRight="@dimen/Size5dp">
+        android:paddingLeft="@dimen/Size1dp"
+        android:paddingRight="@dimen/Size1dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/Size450dp"
+            android:layout_marginTop="@dimen/Size60dp"
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="@dimen/Size20dp">
+                android:padding="@dimen/Size10dp">
+                <TextView
+                    android:id="@+id/nombreForm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/ubicacion"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="Nombre Formulario:"
+                    android:textSize="@dimen/Size12dp" />
+                <EditText
+                    android:id="@+id/editNombreForm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/Elementos"
+                    android:layout_alignParentEnd="true"
+                    android:ems="20"
+                    android:inputType="textPersonName"
+                    android:textSize="@dimen/Size12dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/Size10dp">
                 <TextView
                     android:id="@+id/ubicacion"
                     android:layout_width="wrap_content"
@@ -28,7 +53,7 @@
                     android:layout_alignBottom="@+id/editUbicacion"
                     android:layout_alignParentTop="true"
                     android:gravity="center_horizontal|center_vertical"
-                    android:text="Ubicacion"
+                    android:text="Motivo del reclamo:"
                     android:textSize="@dimen/Size12dp" />
 
                 <EditText
@@ -37,8 +62,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
                     android:layout_alignStart="@+id/editElementos"
-                    android:layout_marginLeft="100dp"
-                    android:hint="@string/escriba_aqui"
+                    android:ems="20"
                     android:inputType="textPersonName"
                     android:textSize="@dimen/Size12dp" />
             </LinearLayout>
@@ -47,7 +71,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="@dimen/Size16dp">
+                android:padding="@dimen/Size10dp">
                 <TextView
                     android:id="@+id/Elementos"
                     android:layout_width="wrap_content"
@@ -55,7 +79,7 @@
                     android:layout_alignParentStart="true"
                     android:layout_below="@+id/ubicacion"
                     android:gravity="center_horizontal|center_vertical"
-                    android:text="Elementos sustraidos"
+                    android:text="Descripcion:"
                     android:textSize="@dimen/Size12dp" />
                 <EditText
                     android:id="@+id/editElementos"
@@ -63,8 +87,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignBottom="@+id/Elementos"
                     android:layout_alignParentEnd="true"
-                    android:layout_marginLeft="50dp"
-                    android:hint="@string/escriba_aqui"
+                    android:ems="20"
                     android:inputType="textPersonName"
                     android:textSize="@dimen/Size12dp" />
             </LinearLayout>
@@ -73,7 +96,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="@dimen/Size16dp">
+                android:padding="@dimen/Size10dp">
                 <TextView
                     android:id="@+id/HoraRobo"
                     android:layout_width="wrap_content"
@@ -81,8 +104,8 @@
                     android:layout_alignParentStart="true"
                     android:layout_below="@+id/Elementos"
                     android:gravity="center_horizontal|center_vertical"
-                    android:text="Hora del robo"
-                    android:textSize="@dimen/Size12dp" />
+                    android:text="Hora ocurrencia:"
+                    android:textSize="@dimen/Size12dp"/>
 
                 <EditText
                     android:id="@+id/editHora"
@@ -91,17 +114,17 @@
                     android:layout_alignBaseline="@+id/valorPerdida"
                     android:layout_alignBottom="@+id/valorPerdida"
                     android:layout_alignStart="@+id/editValor"
-                    android:layout_marginLeft="100dp"
-                    android:hint="@string/escriba_aqui"
+                    android:ems="20"
                     android:inputType="textPersonName"
                     android:textSize="@dimen/Size12dp" />
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/layout_last_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="@dimen/Size16dp">
+                android:padding="@dimen/Size10dp">
 
                 <TextView
                     android:id="@+id/valorPerdida"
@@ -110,7 +133,7 @@
                     android:layout_alignParentStart="true"
                     android:layout_below="@+id/HoraRobo"
                     android:gravity="center_horizontal|center_vertical"
-                    android:text="Valor sustraido"
+                    android:text="Asistencia ofrecida:"
                     android:textSize="@dimen/Size12dp" />
 
                 <EditText
@@ -119,11 +142,54 @@
                     android:layout_height="wrap_content"
                     android:layout_alignBaseline="@+id/HoraRobo"
                     android:layout_alignBottom="@+id/HoraRobo"
-                    android:layout_marginLeft="100dp"
                     android:layout_toEndOf="@+id/valorPerdida"
-                    android:hint="@string/escriba_aqui"
+                    android:ems="20"
                     android:inputType="textPersonName"
                     android:textSize="@dimen/Size12dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/Size100dp"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/button_confirm"
+                    android:layout_width="80dp"
+                    android:layout_height="@dimen/Size50dp"
+                    android:layout_marginLeft="@dimen/Size10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_below="@id/layout_last_text"
+                    android:textAlignment="center"
+                    android:text="confirmar reclamo"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorTextWhite"
+                    android:textSize="@dimen/Size10dp"
+                    android:background="@drawable/background_button_blue_white"/>
+
+                <Button
+                    android:id="@+id/button_blank"
+                    android:layout_width="80dp"
+                    android:layout_height="@dimen/Size50dp"
+                    android:textAlignment="center"
+                    android:text="blanquear reclamo"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/Size10dp"
+                    android:textColor="@color/colorTextWhite"
+                    android:layout_toRightOf="@+id/button_confirm"
+                    android:background="@drawable/background_button_blue_white"/>
+
+                <Button
+                    android:id="@+id/button_cancel"
+                    android:layout_width="80dp"
+                    android:layout_height="@dimen/Size50dp"
+                    android:layout_marginLeft="@dimen/Size20dp"
+                    android:layout_marginTop="@dimen/Size5dp"
+                    android:textAlignment="center"
+                    android:text="cancelar"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/Size10dp"
+                    android:textColor="@color/colorTextWhite"
+                    android:layout_toRightOf="@id/button_blank"
+                    android:background="@drawable/background_button_blue_white"/>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
