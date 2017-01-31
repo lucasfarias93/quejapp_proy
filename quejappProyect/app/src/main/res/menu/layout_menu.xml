@@ -3,13 +3,13 @@
     <item
         android:id="@+id/miPerfil"
         app:showAsAction="never"
-        android:title="Mi Perfil"
+        android:title="@string/mi_perfil"
         android:icon="@drawable/usrusr">
     </item>
     <item
         android:id="@+id/desloguearse"
         app:showAsAction="never"
-        android:title="Desloguearse"
+        android:title="@string/desloguearse"
         android:icon="@drawable/usrusr">
     </item>
 </menu>

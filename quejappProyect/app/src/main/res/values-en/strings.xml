@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">QuejApp</string>
+    <string name="ya_tienes_cuenta_logeate">Have an account? <u>Log in</u></string>
+    <string name="usuario_y_contraseña_data">User and Password data</string>
+    <string name="usuario_contraseña_incorrectos">User or Password are incorrect</string>
+    <string name="text2">This is an example text</string>
+    <string name="usuario">User</string>
+    <string name="text1">This is an example text</string>
+    <string name="registrarse">Register</string>
+    <string name="password">Password</string>
+    <string name="ok_button">OK</string>
+    <string name="nombre">Name</string>
+    <string name="no_tienes_cuenta_registrate">Don\'t have an account? <u>Register</u></string>
+    <string name="login">Login</string>
+    <string name="escriba_aqui">Write here</string>
+    <string name="eleccion_primer_tab">Please select what you desire to do next</string>
+    <string name="direccion_de_correo">E-mail</string>
+    <string name="datos_personales">User Personal Data</string>
+    <string name="confirmar_act_datos">Update confirmation</string>
+    <string name="confirmacion_actualizacion">Are you shure you want to update youre data?</string>
+    <string name="cancelar_actualizar">Cancel</string>
+    <string name="cancel_button">CANCEL</string>
+    <string name="campos_obligatorios">Mandatory Fields</string>
+    <string name="button1">Clock to see the tabs</string>
+    <string name="apellido">Last Name</string>
+    <string name="actualizar_data">Update data</string>
+    <string name="actualizacion_datos">Data update</string>
+    <string name="actualice_datos_sensibles">Update your user and password</string>
+    <string name="actualice_datos_personales">Update your personal Data</string>
+    <string name="blanquear_reclamo">Blank claim</string>
+    <string name="campos_no_completados">You must complete the madatory fields</string>
+    <string name="cancelar_reclamo">cancel</string>
+    <string name="confirmar_reclamo">confirm claim</string>
+    <string name="deslogueo_exito">You have logged out with success</string>
+    <string name="email_invalido">The email is not valid or empty</string>
+    <string name="seleccione_el_tipo_de_reclamo_que_quiere_ingresar">Select the type of claim you want to submit</string>
+    <string name="tab_1">What to do?</string>
+    <string name="tab_2">History of Claims</string>
+    <string name="tab_3">More about QuejAPP</string>
+    <string name="usuario_existente">The user already exists. Try with a new one</string>
+    <string name="cargar_nuevo_formulario">Sumbit a new Form</string>
+    <string name="desloguearse">Log out</string>
+    <string name="hacer_otra_cosa">Do somethgin else</string>
+    <string name="mi_perfil">My Profile</string>
+    <string name="tipo_reclamo">Select the type of Claim</string>
+</resources>

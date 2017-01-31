@@ -55,15 +55,11 @@ public class MainActivity extends AppCompatActivity {
                 String password = helper.searchPassword(user);
 
                 if (pass.equals(password)) {
-                    Toast mensaje = Toast.makeText(MainActivity.this, "LO LOGRASTE WACHIN!", Toast.LENGTH_LONG);
-                    mensaje.show();
-
                     usr.setText("");
                     pwd.setText("");
                     Intent i = new Intent(MainActivity.this, TabsActivity.class);
                     i.putExtra("usuario", user);
                     startActivity(i);
-
                 } else {
                     new SimpleDialog().show(getFragmentManager(), "SimpleDialog");
                 }

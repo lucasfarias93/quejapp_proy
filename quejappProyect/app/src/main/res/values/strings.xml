@@ -27,4 +27,21 @@
     <string name="confirmacion_actualizacion">¿Esta seguro que desea actualizar sus datos?</string>
     <string name="confirmar_act_datos">Confirmación de actualizacion</string>
     <string name="escriba_aqui">Escriba aqui</string>
+    <string name="tab_1">¿Que desea hacer?</string>
+    <string name="tab_2">Historial de reclamos</string>
+    <string name="tab_3">Mas sobre QuejApp</string>
+    <string name="deslogueo_exito">Se ha deslogeado con exito</string>
+    <string name="seleccione_el_tipo_de_reclamo_que_quiere_ingresar">Seleccione el tipo de reclamo que quiere ingresar</string>
+    <string name="confirmar_reclamo">confirmar reclamo</string>
+    <string name="blanquear_reclamo">blanquear reclamo</string>
+    <string name="cancelar_reclamo">cancelar</string>
+    <string name="email_invalido">El formato de email introducido no es correcto o esta vacio, intente nuevamente</string>
+    <string name="campos_no_completados">Debe completar los campos obligatorios</string>
+    <string name="usuario_existente">El usuario ya existe, pruebe con otro nombre de usuario</string>
+    <string name="cargar_nuevo_formulario">Cargar nuevo Formulario</string>
+    <string name="hacer_otra_cosa">Hacer Otra cosa</string>
+    <string name="desloguearse">Desloguearse</string>
+    <string name="mi_perfil">Mi Perfil</string>
+    <string name="tipo_reclamo">Seleccione el tipo de reclamo</string>
+
 </resources>

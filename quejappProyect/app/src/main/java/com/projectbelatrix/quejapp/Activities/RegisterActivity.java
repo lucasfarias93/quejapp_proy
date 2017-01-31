@@ -72,11 +72,11 @@ public class RegisterActivity extends AppCompatActivity {
 
     public void validarCampos(String user, String contraseña, String email, User u) {
         if (!ValidatorClass.validarEmail(email)) {
-            Toast.makeText(RegisterActivity.this, "El formato de email introducido no es correcto o esta vacio, intente nuevamente", Toast.LENGTH_LONG).show();
+            Toast.makeText(RegisterActivity.this,R.string.email_invalido, Toast.LENGTH_LONG).show();
         } else if (ValidatorClass.validarEmail(email) && (contraseña + user).equals("")) {
-            Toast.makeText(RegisterActivity.this, "Debe completar los campos obligatorios", Toast.LENGTH_LONG).show();
+            Toast.makeText(RegisterActivity.this,R.string.campos_no_completados, Toast.LENGTH_LONG).show();
         } else if (ValidatorClass.validarEmail(email) && !((contraseña + user).equals("")) && (helper.validateUser(user))) {
-            Toast.makeText(RegisterActivity.this, "El usuario ya existe, pruebe con otro nombre de usuario", Toast.LENGTH_LONG).show();
+            Toast.makeText(RegisterActivity.this, R.string.usuario_existente, Toast.LENGTH_LONG).show();
         } else {
             helper.insertUser(u);
             Intent i = new Intent(RegisterActivity.this, MainActivity.class);

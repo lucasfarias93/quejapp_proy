@@ -59,22 +59,22 @@ public class FormularioActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 switch (position) {
-                    case(0):
+                    case (0):
                         System.out.println("Eligio una opcion" + position);
                         break;
-                    case(1):
+                    case (1):
                         FragmentTransaction transaction = fragmentManager.beginTransaction();
                         Reclamo1Fragment fragment = new Reclamo1Fragment();
                         transaction.replace(R.id.activityContainer, fragment);
                         transaction.commit();
                         break;
-                    case(2):
+                    case (2):
                         transaction = fragmentManager.beginTransaction();
                         Reclamo2Fragment fragment2 = new Reclamo2Fragment();
                         transaction.replace(R.id.activityContainer, fragment2);
                         transaction.commit();
                         break;
-                    case(3):
+                    case (3):
                         transaction = fragmentManager.beginTransaction();
                         Reclamo3Fragment fragment3 = new Reclamo3Fragment();
                         transaction.replace(R.id.activityContainer, fragment3);
@@ -87,6 +87,6 @@ public class FormularioActivity extends AppCompatActivity {
             public void onNothingSelected(AdapterView<?> parent) {
 
             }
-        }) ;
+        });
     }
 }

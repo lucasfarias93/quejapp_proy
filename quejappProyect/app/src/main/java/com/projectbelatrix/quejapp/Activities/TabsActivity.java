@@ -46,9 +46,9 @@ public class TabsActivity extends AppCompatActivity implements ViewPager.OnPageC
         tabHost= (FragmentTabHost) findViewById(android.R.id.tabhost);
         tabHost.setup(this,getSupportFragmentManager(),android.R.id.tabcontent);
 
-        tabHost.addTab(tabHost.newTabSpec("tab1").setIndicator("¿Que desea hacer?"),Tab1Fragment.class, null);
-        tabHost.addTab(tabHost.newTabSpec("tab2").setIndicator("Historial de reclamos"),Tab2Fragment.class, null);
-        tabHost.addTab(tabHost.newTabSpec("tab3").setIndicator("Más sobre Quejapp"),Tab3Fragment.class, null);
+        tabHost.addTab(tabHost.newTabSpec("tab1").setIndicator(getResources().getString(R.string.tab_1)),Tab1Fragment.class, null);
+        tabHost.addTab(tabHost.newTabSpec("tab2").setIndicator(getResources().getString(R.string.tab_2)),Tab2Fragment.class, null);
+        tabHost.addTab(tabHost.newTabSpec("tab3").setIndicator(getResources().getString(R.string.tab_3)),Tab3Fragment.class, null);
         tabHost.setOnTabChangedListener(this);
     }
 
@@ -82,7 +82,7 @@ public class TabsActivity extends AppCompatActivity implements ViewPager.OnPageC
         if (id==R.id.desloguearse) {
             Intent salida = new Intent(Intent.ACTION_MAIN);
             finish();
-            Toast.makeText(this,"Se ha deslogueado con exito",Toast.LENGTH_LONG).show();
+            Toast.makeText(this,R.string.deslogueo_exito,Toast.LENGTH_LONG).show();
         }
 
         return super.onOptionsItemSelected(item);
