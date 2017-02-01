@@ -12,7 +12,7 @@ import android.widget.Toast;
 import com.projectbelatrix.quejapp.Class.User;
 import com.projectbelatrix.quejapp.Helpers.DatabaseHelper;
 import com.projectbelatrix.quejapp.R;
-import com.projectbelatrix.quejapp.utils.ValidatorClass;
+import com.projectbelatrix.quejapp.Class.ValidatorClass;
 
 
 public class RegisterActivity extends AppCompatActivity {

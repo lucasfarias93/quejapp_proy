@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">QuejApp</string>
+    <string name="app_name"><u>QuejApp</u></string>
     <string name="text1">Este es un Texto de ejemplo</string>
     <string name="text2">Este es un Texto de ejemplo para cada tab</string>
     <string name="button1">Click para ver los tabs</string>
@@ -28,7 +28,7 @@
     <string name="confirmar_act_datos">Confirmación de actualizacion</string>
     <string name="escriba_aqui">Escriba aqui</string>
     <string name="tab_1">¿Que desea hacer?</string>
-    <string name="tab_2">Historial de reclamos</string>
+    <string name="tab_2">Reclamos genericos</string>
     <string name="tab_3">Mas sobre QuejApp</string>
     <string name="deslogueo_exito">Se ha deslogeado con exito</string>
     <string name="seleccione_el_tipo_de_reclamo_que_quiere_ingresar">Seleccione el tipo de reclamo que quiere ingresar</string>
@@ -43,5 +43,9 @@
     <string name="desloguearse">Desloguearse</string>
     <string name="mi_perfil">Mi Perfil</string>
     <string name="tipo_reclamo">Seleccione el tipo de reclamo</string>
+    <string name="tecnique_data"><u>Datos Tecnicos</u></string>
+    <string name="tecnique_descripcion">Aplicación que actualmente se encuentra en su primera version v1.0, desarrollada por integrantes un equipo de trabajo en Belatrix SF. Lucas Farias - Elias Medina - Gaston Grippi</string>
+    <string name="sistema_operativo"><u> - Sistema operativo soportado:</u> Android 4.+/5.+/6.+</string>
+    <string name="agradecimiento">¡Muchas gracias por hacer uso de nuestra aplicacion!</string>
 
 </resources>

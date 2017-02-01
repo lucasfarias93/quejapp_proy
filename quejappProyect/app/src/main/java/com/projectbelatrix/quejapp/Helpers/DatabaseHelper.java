@@ -32,7 +32,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String COLUMN_DESCRIPCION = "descripcion";
     private static final String COLUMN_HORA = "hora";
     private static final String COLUMN_ASISTENCIA = "asistencia";
+
     SQLiteDatabase db;
+
     private static final String TABLE_CREATE_USERS = "create table users (id integer primary key not null , " +
             "nombre text not null , apellido text not null , email text not null , usuario text not null , contraseña text not null);";
 
@@ -43,8 +45,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(TABLE_CREATE_FORMULARIO);
         db.execSQL(TABLE_CREATE_USERS);
+        db.execSQL(TABLE_CREATE_FORMULARIO);
         this.db = db;
     }
     public void insertUser(User u){
@@ -62,6 +64,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put (COLUMN_CONTRASEÑA, u.getPassword());
 
         db.insert(TABLE_NAME_USERS, null , values);
+        cursor.close();
         db.close();
     }
 
@@ -87,6 +90,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 }
             } while (cursor.moveToNext());
         }
+        cursor.close();
     }
     public boolean validateUser(String user) {
         boolean valor = false;
@@ -104,6 +108,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             } while (cursor.moveToNext());
             return valor;
         }
+        cursor.close();
         return valor;
     }
     public String searchPassword (String user){
@@ -122,6 +127,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 }
             } while (cursor.moveToNext());
         }
+        cursor.close();
         return b;
     }
     public User getProfileData(String user){
@@ -141,23 +147,23 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     usuario.setEmail(cursor.getString(2));
                 }
             } while (cursor.moveToNext());
+            cursor.close();
             return usuario;
         }
+        cursor.close();
         return null;
     }
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        String query = "DROP TABLE IF EXISTS "+ TABLE_NAME_USERS;
-        db.execSQL(query);
-        String query1 = "DROP TABLE IF EXISTS " + TABLE_CREATE_FORMULARIO;
-        db.execSQL(query1);
+        db.execSQL("DROP TABLE IF EXISTS "+ TABLE_NAME_USERS);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_CREATE_FORMULARIO);
         onCreate(db);
     }
 
     public void insertFormulario(Formulario form){
         db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
-        String query = " select * from users ";
+        String query = " select * from " + TABLE_NAME_FORMULARIO;
         Cursor cursor = db.rawQuery(query , null);
         int count = cursor.getCount();
 
@@ -169,6 +175,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put (COLUMN_ASISTENCIA, form.getAsistencia());
 
         db.insert(TABLE_NAME_FORMULARIO, null , values);
+        cursor.close();
         db.close();
     }
     public Formulario getFormularioData(String form_nombre){
@@ -188,8 +195,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     form.setAsistencia(cursor.getString(4));
                 }
             } while (cursor.moveToNext());
+            cursor.close();
             return form;
         }
+        cursor.close();
         return null;
+    }
+    public void getTables(){
+        String query = " select * from sqlite_master";
+        db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(query, null);
     }
 }

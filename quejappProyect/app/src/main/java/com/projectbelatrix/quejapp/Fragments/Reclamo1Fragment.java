@@ -1,7 +1,6 @@
 package com.projectbelatrix.quejapp.Fragments;
 
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.app.Fragment;
@@ -11,11 +10,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
-import com.projectbelatrix.quejapp.Activities.GetFormDataActivity;
-import com.projectbelatrix.quejapp.Activities.TabsActivity;
-import com.projectbelatrix.quejapp.Class.Formulario;
-import com.projectbelatrix.quejapp.Helpers.DatabaseHelper;
 import com.projectbelatrix.quejapp.R;
 
 
@@ -90,7 +86,15 @@ public class Reclamo1Fragment extends Fragment {
         confirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                DatabaseHelper helper = new DatabaseHelper(getActivity());
+                nombre_reclamo.setText("");
+                motivo.setText("");
+                descripcion.setText("");
+                hora_ocurrencia.setText("");
+                asistencia.setText("");
+                Toast.makeText(getActivity(), "Reclamo guardado con exito", Toast.LENGTH_SHORT).show();
+                getActivity().finish();
+
+                /*DatabaseHelper helper = new DatabaseHelper(getActivity());
                 Formulario form = new Formulario();
                 form.setForm_nombre(nombre_reclamo.getText().toString());
                 form.setMotivo_reclamo(motivo.getText().toString());
@@ -102,7 +106,7 @@ public class Reclamo1Fragment extends Fragment {
                 String nombre = form.getForm_nombre();
                 Intent i = new Intent(getActivity(), GetFormDataActivity.class);
                 i.putExtra("form_nombre", nombre);
-                startActivity(i);
+                startActivity(i);*/
 
             }
         });

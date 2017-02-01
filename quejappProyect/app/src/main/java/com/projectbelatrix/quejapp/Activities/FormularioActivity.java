@@ -4,12 +4,6 @@ package com.projectbelatrix.quejapp.Activities;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 
-import android.app.Activity;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
-import android.content.Intent;
-import android.support.v4.app.Fragment;
-
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -23,17 +17,6 @@ import com.projectbelatrix.quejapp.R;
 import com.projectbelatrix.quejapp.Fragments.Reclamo1Fragment;
 import com.projectbelatrix.quejapp.Fragments.Reclamo2Fragment;
 import com.projectbelatrix.quejapp.Fragments.Reclamo3Fragment;
-
-import android.widget.RelativeLayout;
-import android.widget.Spinner;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import com.projectbelatrix.quejapp.R;
-import com.projectbelatrix.quejapp.reclamo1;
-import com.projectbelatrix.quejapp.reclamo2;
-import com.projectbelatrix.quejapp.reclamo3;
 
 
 public class FormularioActivity extends AppCompatActivity {

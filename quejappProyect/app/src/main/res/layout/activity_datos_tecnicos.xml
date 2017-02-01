@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/Size60dp"
+    android:paddingLeft="@dimen/Size30dp"
+    android:paddingRight="@dimen/Size40dp"
+    android:paddingTop="@dimen/Size60dp"
+    android:background="@drawable/background_image_tabs_90"
+    tools:context="com.projectbelatrix.quejapp.Activities.DatosTecnicosActivity">
+
+    <TextView
+        android:id="@+id/text_app_name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/Size50dp"
+        android:padding="@dimen/Size10dp"
+        android:text="@string/app_name"
+        android:textSize="@dimen/Size20dp"
+        android:textColor="@color/colorTextWhite" />
+
+    <TextView
+        android:id="@+id/textTecnique_data"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/Size50dp"
+        android:layout_below="@+id/text_app_name"
+        android:padding="@dimen/Size10dp"
+        android:textSize="@dimen/Size15dp"
+        android:text="@string/tecnique_data"
+        android:textColor="@color/colorTextWhite" />
+
+    <TextView
+        android:id="@+id/descripcion"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/Size100dp"
+        android:textColor="@color/colorTextWhite"
+        android:layout_below="@+id/textTecnique_data"
+        android:text="@string/tecnique_descripcion"/>
+
+    <TextView
+        android:id="@+id/sistema"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/Size50dp"
+        android:layout_below="@+id/descripcion"
+        android:text="@string/sistema_operativo"
+        android:textColor="@color/colorTextWhite"
+        />
+
+    <TextView
+        android:id="@+id/agradecimiento"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/Size200dp"
+        android:text="@string/agradecimiento"
+        android:layout_below="@+id/sistema"
+        android:paddingTop="@dimen/Size120dp"
+        android:textColor="@color/colorTextWhite"
+        />
+
+</RelativeLayout>

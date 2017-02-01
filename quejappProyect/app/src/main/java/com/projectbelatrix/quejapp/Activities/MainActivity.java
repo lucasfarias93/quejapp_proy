@@ -57,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
                 if (pass.equals(password)) {
                     usr.setText("");
                     pwd.setText("");
+                    Toast.makeText(MainActivity.this, "Se inicio sesion correctamente", Toast.LENGTH_LONG).show();
                     Intent i = new Intent(MainActivity.this, TabsActivity.class);
                     i.putExtra("usuario", user);
                     startActivity(i);
