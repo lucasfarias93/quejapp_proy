@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.projectbelatrix.quejapp.Activities.Activity_Opiniones"
-    tools:showIn="@layout/activity__opiniones">
+    tools:context=".Activities.OpinionesActivity"
+    tools:showIn="@layout/activity_opiniones">
 
     <TextView
         android:layout_width="wrap_content"

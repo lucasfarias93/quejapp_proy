@@ -21,7 +21,7 @@
         <activity android:name=".Activities.UsuarioPerfilActivity" />
         <activity android:name=".Activities.DatosTecnicosActivity" />
         <activity
-            android:name=".Activities.Activity_Opiniones"
+            android:name=".Activities.OpinionesActivity"
             android:label="@string/title_activity__opiniones"
             android:theme="@style/AppTheme"></activity>
     </application>

@@ -95,7 +95,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:layout_marginBottom="@dimen/Size50dp"
-            android:background="@drawable/background_button_blue_white"
+            android:background="@drawable/background_button_blue"
             android:gravity="center"
             android:letterSpacing="0.2"
             android:padding="@dimen/Size16dp"

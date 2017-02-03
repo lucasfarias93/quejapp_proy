@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="60dp"
+    android:layout_height="@dimen/Size80dp"
     android:orientation="vertical"
     >
-<LinearLayout
-    android:layout_width="match_parent" android:layout_height="80dp"
-    android:orientation="horizontal"
-    android:padding="@dimen/Size5dp"
-    android:background="@drawable/background_image_tabs_90"
-    android:id="@+id/layout_items"
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="@dimen/Size80dp"
+        android:orientation="horizontal"
+        android:padding="@dimen/Size5dp"
+        android:background="@drawable/background_image_tabs_90"
+        android:id="@+id/layout_items"
         >
         <LinearLayout
             android:layout_width="match_parent"
@@ -24,38 +24,39 @@
                 android:layout_alignParentStart="true"/>
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="0.3">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/nombre"
+                android:textSize="20dp"
+                android:text="hola"
+                android:textStyle="bold"
+                android:textColor="@color/colorTextWhite"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/data"
+                android:text="holas"
+                android:textStyle="bold"
+                android:textColor="@color/colorTextWhite"
+                android:layout_alignBottom="@+id/imagen"
+                android:layout_centerHorizontal="true"
+                android:textSize="13dp"
+                android:layout_gravity="center_horizontal"/>
+        </LinearLayout>
+    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_weight="0.3">
-              <TextView
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:id="@+id/nombre"
-                  android:textSize="20dp"
-                  android:text="hola"
-                  android:textStyle="bold"
-                  android:textColor="@color/colorTextWhite"
-                  android:layout_alignParentTop="true"
-                  android:layout_centerHorizontal="true"
-                  android:layout_gravity="center_horizontal" />
-
-              <TextView
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:id="@+id/data"
-                  android:text="holas"
-                  android:textStyle="bold"
-                  android:textColor="@color/colorTextWhite"
-                  android:layout_alignBottom="@+id/imagen"
-                  android:layout_centerHorizontal="true"
-                  android:textSize="13dp"/>
-    </LinearLayout>
+        android:layout_height="@dimen/Size2dp"
+        android:layout_marginTop="@dimen/Size1dp"
+        android:background="@color/colorTextBlack"></LinearLayout>
 </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/Size5dp"
-        android:background="#000"></LinearLayout>
-    </LinearLayout>
-

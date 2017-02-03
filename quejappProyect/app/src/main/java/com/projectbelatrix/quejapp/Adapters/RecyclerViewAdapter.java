@@ -2,7 +2,6 @@ package com.projectbelatrix.quejapp.Adapters;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,9 +10,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.projectbelatrix.quejapp.Activities.Activity_Opiniones;
+import com.projectbelatrix.quejapp.Activities.OpinionesActivity;
 import com.projectbelatrix.quejapp.Class.Forms;
-import com.projectbelatrix.quejapp.Fragments.Reclamo3Fragment;
 import com.projectbelatrix.quejapp.R;
 
 import java.util.List;
@@ -46,7 +44,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         @Override
         public void onClick(View v) {
 
-            Intent i = new Intent(mContext, Activity_Opiniones.class);
+            Intent i = new Intent(mContext, OpinionesActivity.class);
             mContext.startActivity(i);
         }
     }
