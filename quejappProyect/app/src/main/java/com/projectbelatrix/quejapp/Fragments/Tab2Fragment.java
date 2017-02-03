@@ -52,6 +52,10 @@ public class Tab2Fragment extends Fragment {
         forms.add(new Forms ("Comida Rapida", "De su opinion sobre cualquier comida rapida aqui", R.drawable.comida));
         forms.add(new Forms ("Deportes", "De su opinion sobre Deportes aqui", R.drawable.sports));
         forms.add(new Forms ("Salud", "De su opinion sobre Salud aqui", R.drawable.hospital));
+        forms.add(new Forms ("Deportes", "De su opinion sobre Deportes aqui", R.drawable.sports));
+        forms.add(new Forms ("Salud", "De su opinion sobre Salud aqui", R.drawable.hospital));
+        forms.add(new Forms ("Deportes", "De su opinion sobre Deportes aqui", R.drawable.sports));
+        forms.add(new Forms ("Salud", "De su opinion sobre Salud aqui", R.drawable.hospital));
 
     }
     private void initializeAdapter(){

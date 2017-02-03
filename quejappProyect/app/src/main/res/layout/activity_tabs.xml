@@ -20,7 +20,7 @@
         <ImageView
             android:id="@+id/imageView2"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/SizeLogo2"
+            android:layout_height="@dimen/Size200dp"
             android:src="@drawable/logo5" />
     </RelativeLayout>
 
