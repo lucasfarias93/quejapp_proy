@@ -2,8 +2,8 @@
 <resources>
     <string-array name="tipo_reclamo">
         <item>@string/tipo_reclamo</item>
-        <item>Robo</item>
-        <item>Vialidad</item>
+        <item>Mal servicio de atencion</item>
+        <item>Rating de servicio</item>
         <item>Otros</item>
     </string-array>
     </resources>

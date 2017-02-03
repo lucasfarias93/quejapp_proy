@@ -18,7 +18,8 @@ import com.projectbelatrix.quejapp.R;
  */
 public class Tab3Fragment extends Fragment {
 
-    private TextView mas_sobre_quejapp;
+    private TextView mas_sobre_quejapp, clickeable_link;
+    private String url ="http://www.google.com";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -33,8 +34,23 @@ public class Tab3Fragment extends Fragment {
     }
 
     public void ui(View v) {
-        mas_sobre_quejapp = (TextView) v.findViewById(R.id.text2) ;
+        mas_sobre_quejapp = (TextView) v.findViewById(R.id.text2);
+        clickeable_link = (TextView) v.findViewById(R.id.text_link);
         Typeface custom_font1 = Typeface.createFromAsset(getActivity().getAssets(), "fonts/LatoRegular.ttf");
         mas_sobre_quejapp.setTypeface(custom_font1);
+        clickeable_link.setTypeface(custom_font1);
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+        clickeable_link.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                startActivity(i);
+            }
+        });
     }
 }

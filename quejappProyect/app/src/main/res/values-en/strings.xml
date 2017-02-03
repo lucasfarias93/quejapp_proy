@@ -48,4 +48,5 @@
     <string name="sistema_operativo"><u> - Operative Sistem Supported:</u> Android 4.+/5.+/6.+</string>
     <string name="tecnique_data"><u>Tecnical Data</u></string>
     <string name="tecnique_descripcion">Application currently in the first version v1.0 developed by a dev. team working in Belatrix SF. Lucas Farias - Elias Medina - Gaston Grippi</string>
+    <string name="linkeable"><u>For mor info, follow this link</u></string>
 </resources>
