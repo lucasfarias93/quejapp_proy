@@ -31,7 +31,11 @@ public class Reclamo1Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_reclamo1, container, false);
+        ui(view);
+        return view;
+    }
 
+    public void ui(View view) {
         nombre_reclamo = (EditText) view.findViewById(R.id.editNombreForm);
         motivo = (EditText) view.findViewById(R.id.editUbicacion);
         hora_ocurrencia = (EditText) view.findViewById(R.id.editElementos);
@@ -51,20 +55,18 @@ public class Reclamo1Fragment extends Fragment {
         confirm.setTypeface(custom_font1);
         cancel.setTypeface(custom_font1);
         blank.setTypeface(custom_font1);
-        //Nuevos parametros para el view del fragmento
-        RelativeLayout.LayoutParams params =
-                new RelativeLayout.LayoutParams(
-                        RelativeLayout.LayoutParams.MATCH_PARENT,
-                        RelativeLayout.LayoutParams.MATCH_PARENT);
 
-        //Nueva Regla: EL fragmento estara debajo del boton add_fragment
-        params.addRule(RelativeLayout.BELOW, R.id.button_confirm);
+        cancel.setText("Regresar");
+    }
 
-        //Margenes: top:41dp
-        params.setMargins(0,41,0,0);
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+    }
 
-        //Setear los parametros al view
-        view.setLayoutParams(params);
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
 
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -93,29 +95,7 @@ public class Reclamo1Fragment extends Fragment {
                 asistencia.setText("");
                 Toast.makeText(getActivity(), "Reclamo guardado con exito", Toast.LENGTH_SHORT).show();
                 getActivity().finish();
-
-                /*DatabaseHelper helper = new DatabaseHelper(getActivity());
-                Formulario form = new Formulario();
-                form.setForm_nombre(nombre_reclamo.getText().toString());
-                form.setMotivo_reclamo(motivo.getText().toString());
-                form.setDescripcion(descripcion.getText().toString());
-                form.setHora_realizacion(hora_ocurrencia.getText().toString());
-                form.setAsistencia(asistencia.getText().toString());
-
-                helper.insertFormulario(form);
-                String nombre = form.getForm_nombre();
-                Intent i = new Intent(getActivity(), GetFormDataActivity.class);
-                i.putExtra("form_nombre", nombre);
-                startActivity(i);*/
-
             }
         });
-
-        return view;
-    }
-
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
     }
 }

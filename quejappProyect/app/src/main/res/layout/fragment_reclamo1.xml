@@ -22,6 +22,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:padding="@dimen/Size10dp">
+
                 <TextView
                     android:id="@+id/nombreForm"
                     android:layout_width="wrap_content"
@@ -31,6 +32,7 @@
                     android:gravity="center_horizontal|center_vertical"
                     android:text="Nombre Formulario:"
                     android:textSize="@dimen/Size12dp" />
+
                 <EditText
                     android:id="@+id/editNombreForm"
                     android:layout_width="wrap_content"
@@ -41,11 +43,13 @@
                     android:inputType="textPersonName"
                     android:textSize="@dimen/Size12dp" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:padding="@dimen/Size10dp">
+
                 <TextView
                     android:id="@+id/ubicacion"
                     android:layout_width="wrap_content"
@@ -72,6 +76,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:padding="@dimen/Size10dp">
+
                 <TextView
                     android:id="@+id/Elementos"
                     android:layout_width="wrap_content"
@@ -81,6 +86,7 @@
                     android:gravity="center_horizontal|center_vertical"
                     android:text="Descripcion:"
                     android:textSize="@dimen/Size12dp" />
+
                 <EditText
                     android:id="@+id/editElementos"
                     android:layout_width="wrap_content"
@@ -97,6 +103,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:padding="@dimen/Size10dp">
+
                 <TextView
                     android:id="@+id/HoraRobo"
                     android:layout_width="wrap_content"
@@ -105,7 +112,7 @@
                     android:layout_below="@+id/Elementos"
                     android:gravity="center_horizontal|center_vertical"
                     android:text="Hora ocurrencia:"
-                    android:textSize="@dimen/Size12dp"/>
+                    android:textSize="@dimen/Size12dp" />
 
                 <EditText
                     android:id="@+id/editHora"
@@ -147,35 +154,37 @@
                     android:inputType="textPersonName"
                     android:textSize="@dimen/Size12dp" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/Size100dp"
                 android:orientation="horizontal">
+
                 <Button
                     android:id="@+id/button_confirm"
                     android:layout_width="80dp"
                     android:layout_height="@dimen/Size50dp"
+                    android:layout_below="@id/layout_last_text"
                     android:layout_marginLeft="@dimen/Size10dp"
                     android:layout_marginRight="20dp"
-                    android:layout_below="@id/layout_last_text"
-                    android:textAlignment="center"
+                    android:background="@drawable/background_button_blue_white"
                     android:text="confirmar reclamo"
-                    android:textStyle="bold"
+                    android:textAlignment="center"
                     android:textColor="@color/colorTextWhite"
                     android:textSize="@dimen/Size10dp"
-                    android:background="@drawable/background_button_blue_white"/>
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/button_blank"
                     android:layout_width="80dp"
                     android:layout_height="@dimen/Size50dp"
-                    android:textAlignment="center"
-                    android:text="blanquear reclamo"
-                    android:textStyle="bold"
-                    android:textSize="@dimen/Size10dp"
-                    android:textColor="@color/colorTextWhite"
                     android:layout_toRightOf="@+id/button_confirm"
-                    android:background="@drawable/background_button_blue_white"/>
+                    android:background="@drawable/background_button_blue_white"
+                    android:text="blanquear reclamo"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorTextWhite"
+                    android:textSize="@dimen/Size10dp"
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/button_cancel"
@@ -183,13 +192,13 @@
                     android:layout_height="@dimen/Size50dp"
                     android:layout_marginLeft="@dimen/Size20dp"
                     android:layout_marginTop="@dimen/Size5dp"
-                    android:textAlignment="center"
-                    android:text="cancelar"
-                    android:textStyle="bold"
-                    android:textSize="@dimen/Size10dp"
-                    android:textColor="@color/colorTextWhite"
                     android:layout_toRightOf="@id/button_blank"
-                    android:background="@drawable/background_button_blue_white"/>
+                    android:background="@drawable/background_button_blue_white"
+                    android:text="cancelar"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorTextWhite"
+                    android:textSize="@dimen/Size10dp"
+                    android:textStyle="bold" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

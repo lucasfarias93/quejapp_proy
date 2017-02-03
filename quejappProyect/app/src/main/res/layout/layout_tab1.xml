@@ -1,44 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_image_tabs_90"
+    android:padding="@dimen/Size20dp">
 
     <TextView
         android:id="@+id/text2"
-        android:textStyle="normal"
-        android:textColor="@color/colorTextBlack"
-        android:text="@string/eleccion_primer_tab"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center_horizontal"/>
+        android:gravity="center_horizontal"
+        android:text="@string/eleccion_primer_tab"
+        android:textColor="@color/colorTextBlack"
+        android:textStyle="normal" />
 
-    <Button
-        android:layout_width="@dimen/SizeWidthButton_150dp"
-        android:layout_height="@dimen/SizeHeightButton_75dp"
-        android:textColor="@color/colorTextWhite"
-        android:textStyle="normal"
-        android:text="@string/cargar_nuevo_formulario"
-        android:id="@+id/cargarFormulario"
-        android:gravity="center_horizontal|center_vertical"
-        android:layout_gravity="top"
-        android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/hacerOtraCosa"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/background_button_blue_white"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/Size30dp"
+        android:paddingLeft="@dimen/Size50dp">
 
-    <Button
-        android:layout_width="@dimen/SizeWidthButton_150dp"
-        android:layout_height="@dimen/SizeHeightButton_75dp"
-        android:textColor="@color/colorTextWhite"
-        android:text="@string/hacer_otra_cosa"
-        android:textStyle="normal"
-        android:id="@+id/hacerOtraCosa"
-        android:gravity="center_horizontal|center_vertical"
-        android:layout_marginLeft="100dp"
-        android:layout_marginRight="100dp"
-        android:layout_marginTop="50dp"
-        android:layout_below="@+id/cargarFormulario"
-        android:layout_alignParentStart="true"
-        android:background="@drawable/background_button_blue_white"/>
+        <Button
+            android:id="@+id/cargarFormulario"
+            android:layout_width="@dimen/Size200dp"
+            android:layout_height="@dimen/SizeHeightButton_75dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/hacerOtraCosa"
+            android:layout_gravity="top"
+            android:layout_marginLeft="@dimen/Size16dp"
+            android:background="@drawable/background_button_blue_white"
+            android:text="@string/cargar_nuevo_formulario"
+            android:textColor="@color/colorTextWhite"
+            android:textStyle="normal"
+            android:textSize="@dimen/Size12dp"/>
 
+        <Button
+            android:id="@+id/hacerOtraCosa"
+            android:layout_width="@dimen/Size200dp"
+            android:layout_height="@dimen/SizeHeightButton_75dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="@dimen/Size16dp"
+            android:layout_below="@+id/cargarFormulario"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/background_button_blue_white"
+            android:text="@string/hacer_otra_cosa"
+            android:textColor="@color/colorTextWhite"
+            android:textStyle="normal"
+            android:textSize="@dimen/Size12dp"/>
+    </LinearLayout>
 </RelativeLayout>

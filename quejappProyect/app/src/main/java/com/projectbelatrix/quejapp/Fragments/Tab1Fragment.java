@@ -1,6 +1,7 @@
 package com.projectbelatrix.quejapp.Fragments;
 
 import android.content.Intent;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -27,9 +28,19 @@ public class Tab1Fragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.layout_tab1, container, false);
+        ui(view);
+        return view;
+    }
+
+    public void ui(View view) {
         formularioReclamo = (Button) view.findViewById(R.id.cargarFormulario);
         hacerOtraCosa = (Button) view.findViewById(R.id.hacerOtraCosa);
         hacerOtraCosa.setText("Datos tecnicos");
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
 
         formularioReclamo.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,6 +57,5 @@ public class Tab1Fragment extends Fragment {
                 startActivity(i);
             }
         });
-        return view;
     }
 }

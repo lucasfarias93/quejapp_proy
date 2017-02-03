@@ -2,38 +2,39 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="@dimen/Size200dp"
-    android:padding="@dimen/Size20dp"
-    android:background="@drawable/background_image_tabs_90">
+    android:background="@drawable/background_image_tabs_90"
+    android:padding="@dimen/Size40dp">
 
     <TextView
         android:id="@+id/textLogin"
         android:layout_width="match_parent"
-        android:textColor="@color/colorTextWhite"
         android:layout_height="@dimen/Size20dp"
+        android:gravity="center_horizontal|center_vertical"
         android:text="@string/login"
-        android:textSize="@dimen/Size16dp"
-        android:gravity="center_horizontal|center_vertical"/>
+        android:textColor="@color/colorTextWhite"
+        android:textSize="@dimen/Size16dp" />
+
     <TextView
         android:id="@+id/text_incorrect"
-        android:layout_marginTop="@dimen/Size16dp"
-        android:textSize="@dimen/Size12dp"
-        android:textColor="@color/colorTextWhite"
         android:layout_width="wrap_content"
-        android:layout_below="@+id/textLogin"
         android:layout_height="@dimen/Size40dp"
+        android:layout_below="@+id/textLogin"
+        android:layout_marginTop="@dimen/Size16dp"
+        android:layout_marginLeft="@dimen/Size20dp"
+        android:gravity="center_vertical|center_horizontal"
         android:text="@string/usuario_contraseña_incorrectos"
-        android:gravity="center_vertical|center_horizontal"/>
-    <!--android:layout_marginLeft="@dimen/Size30dp"-->
+        android:textColor="@color/colorTextWhite"
+        android:textSize="@dimen/Size12dp" />
 
     <Button
         android:id="@+id/button_ok_dialog"
-        android:layout_marginTop="70dp"
-        android:textColor="@color/colorTextWhite"
-        android:layout_width="@dimen/Size40dp"
+        android:layout_width="@dimen/Size100dp"
         android:layout_height="@dimen/Size40dp"
-        android:text="@string/ok_button"
-        android:gravity="center"
         android:layout_below="@+id/textLogin"
+        android:layout_marginTop="70dp"
         android:background="@drawable/background_button_blue_white"
-        android:layout_marginLeft="120dp"/>
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_marginLeft="@dimen/Size60dp"
+        android:text="@string/ok_button"
+        android:textColor="@color/colorTextWhite" />
 </RelativeLayout>

@@ -1,48 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_image_tabs_180">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
         android:paddingLeft="@dimen/Size60dp"
         android:paddingRight="@dimen/Size60dp">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            >
+            android:orientation="vertical">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:padding="@dimen/Size16dp">
+
                 <ImageView
                     android:layout_width="@dimen/Size20dp"
                     android:layout_height="@dimen/Size20dp"
-                    android:src="@drawable/message"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="center"
+                    android:src="@drawable/message" />
+
                 <EditText
                     android:id="@+id/mail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/direccion_de_correo"
-                    android:textColorHint="@color/colorTextBlack"
                     android:layout_marginLeft="@dimen/Size15dp"
                     android:background="#00000000"
-                    android:letterSpacing="0.1"
-                    android:textSize="@dimen/Size16dp"
+                    android:hint="@string/direccion_de_correo"
                     android:inputType="textEmailAddress"
-                    android:textColor="@color/colorTextBlack"
-                    />
+                    android:letterSpacing="0.1"
+                    android:textColor="@color/colorTextWhite"
+                    android:textColorHint="@color/colorTextBlack"
+                    android:textSize="@dimen/Size16dp" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/Size1dp"
                 android:background="@color/colorLayoutBlack"></LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -52,30 +56,33 @@
                 <ImageView
                     android:layout_width="@dimen/Size20dp"
                     android:layout_height="@dimen/Size20dp"
-                    android:src="@drawable/usrusr"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="center"
+                    android:src="@drawable/usrusr" />
+
                 <EditText
                     android:id="@+id/nombre"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/nombre"
-                    android:textColorHint="@color/colorTextBlack"
                     android:layout_marginLeft="@dimen/Size15dp"
                     android:background="#00000000"
-                    android:letterSpacing="0.1"
-                    android:textSize="@dimen/Size16dp"
+                    android:hint="@string/nombre"
                     android:inputType="text"
-                    android:textColor="@color/colorTextBlack"
-                    />
+                    android:letterSpacing="0.1"
+                    android:textColor="@color/colorTextWhite"
+                    android:textColorHint="@color/colorTextBlack"
+                    android:textSize="@dimen/Size16dp" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/Size1dp"
                 android:background="@color/colorLayoutBlack"></LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/Size1dp"
                 android:background="@color/colorLayoutBlack"></LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -85,94 +92,103 @@
                 <ImageView
                     android:layout_width="@dimen/Size20dp"
                     android:layout_height="@dimen/Size20dp"
-                    android:src="@drawable/usrusr"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="center"
+                    android:src="@drawable/usrusr" />
 
                 <EditText
                     android:id="@+id/apellido"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/apellido"
-                    android:textColorHint="@color/colorTextBlack"
                     android:layout_marginLeft="@dimen/Size15dp"
                     android:background="#00000000"
-                    android:letterSpacing="0.1"
-                    android:textSize="@dimen/Size16dp"
+                    android:hint="@string/apellido"
                     android:inputType="text"
-                    android:textColor="@color/colorTextBlack"
-                    />
+                    android:letterSpacing="0.1"
+                    android:textColor="@color/colorTextWhite"
+                    android:textColorHint="@color/colorTextBlack"
+                    android:textSize="@dimen/Size16dp" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/Size1dp"
                 android:background="@color/colorLayoutBlack"></LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:padding="@dimen/Size16dp">
+
                 <ImageView
                     android:layout_width="@dimen/Size16dp"
                     android:layout_height="@dimen/Size16dp"
-                    android:src="@drawable/obligatory_icon"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="center"
+                    android:src="@drawable/obligatory_icon" />
+
                 <ImageView
                     android:layout_width="@dimen/Size20dp"
                     android:layout_height="@dimen/Size20dp"
-                    android:src="@drawable/usrusr"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="center"
+                    android:src="@drawable/usrusr" />
+
                 <EditText
                     android:id="@+id/user"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/usuario"
-                    android:textColorHint="@color/colorTextBlack"
                     android:layout_marginLeft="@dimen/Size15dp"
                     android:background="#00000000"
-                    android:letterSpacing="0.1"
-                    android:textSize="@dimen/Size16dp"
+                    android:hint="@string/usuario"
                     android:inputType="text"
-                    android:textColor="@color/colorTextBlack"
-                    />
+                    android:letterSpacing="0.1"
+                    android:textColor="@color/colorTextWhite"
+                    android:textColorHint="@color/colorTextBlack"
+                    android:textSize="@dimen/Size16dp" />
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/Size1dp"
                 android:background="@color/colorLayoutBlack"></LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:padding="@dimen/Size16dp">
+
                 <ImageView
                     android:layout_width="@dimen/Size16dp"
                     android:layout_height="@dimen/Size16dp"
-                    android:src="@drawable/obligatory_icon"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="center"
+                    android:src="@drawable/obligatory_icon" />
+
                 <ImageView
                     android:layout_width="@dimen/Size20dp"
                     android:layout_height="@dimen/Size20dp"
-                    android:src="@drawable/pswd"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="center"
+                    android:src="@drawable/pswd" />
+
                 <EditText
                     android:id="@+id/pwd"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/password"
-                    android:textColorHint="@color/colorTextBlack"
                     android:layout_marginLeft="@dimen/Size15dp"
                     android:background="#00000000"
+                    android:hint="@string/password"
                     android:inputType="textPassword"
                     android:letterSpacing="0.1"
-                    android:textSize="@dimen/Size16dp"
-                    android:textColor="@color/colorTextBlack"
-                    />
+                    android:textColor="@color/colorTextWhite"
+                    android:textColorHint="@color/colorTextBlack"
+                    android:textSize="@dimen/Size16dp" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/Size1dp"
                 android:background="@color/colorLayoutBlack"></LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/Size1dp"
@@ -183,75 +199,79 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
         android:layout_marginBottom="@dimen/Size400dp"
+        android:gravity="center"
         android:weightSum="1">
 
         <ImageView
+            android:id="@+id/imageView2"
             android:layout_width="0dp"
             android:layout_height="@dimen/SizeLogo2"
-            android:src="@drawable/logo5"
             android:layout_weight="0.72"
-            android:id="@+id/imageView2" />
+            android:src="@drawable/logo5" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingLeft="@dimen/Size60dp"
-        android:paddingRight="@dimen/Size60dp"
-        android:orientation="vertical"
-        android:gravity="bottom"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/Size60dp"
+        android:paddingRight="@dimen/Size60dp">
+
         <TextView
             android:id="@+id/reg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/Size10dp"
             android:background="@drawable/background_button_blue_white"
+            android:gravity="center"
+            android:letterSpacing="0.2"
+            android:padding="@dimen/Size12dp"
             android:text="@string/registrarse"
             android:textColor="@color/colorTextWhite"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:layout_gravity="bottom"
-            android:padding="@dimen/Size12dp"
-            android:layout_marginBottom="@dimen/Size10dp"
-            android:letterSpacing="0.2"
-            />
+            android:textStyle="bold" />
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
             android:orientation="horizontal"
-            android:padding="@dimen/Size16dp"
-            android:layout_marginLeft="12dp">
+            android:padding="@dimen/Size16dp">
+
             <ImageView
                 android:layout_width="@dimen/Size16dp"
                 android:layout_height="@dimen/Size16dp"
-                android:src="@drawable/obligatory_icon"
-                android:layout_marginLeft="@dimen/Size12dp"
                 android:layout_gravity="center"
-                android:layout_marginBottom="5dp"/>
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="@dimen/Size12dp"
+                android:src="@drawable/obligatory_icon" />
+
             <TextView
                 android:id="@+id/campos_oblig"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textSize="@dimen/Size10dp"
                 android:layout_marginBottom="5dp"
                 android:layout_marginLeft="30dp"
+                android:gravity="center"
+                android:letterSpacing="0.1"
                 android:text="@string/campos_obligatorios"
-                android:textColor="@color/colorTextWhite"
-                android:letterSpacing="0.1"/>
+                android:textColor="@color/colorTextBlack"
+                android:textSize="@dimen/Size10dp" />
         </LinearLayout>
+
         <TextView
             android:id="@+id/log"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:layout_marginBottom="@dimen/Size20dp"
+            android:gravity="center"
+            android:letterSpacing="0.1"
             android:text="@string/ya_tienes_cuenta_logeate"
-            android:textColor="@color/colorTextBlack"
-            android:letterSpacing="0.1"/>
+            android:textColor="@color/colorTextBlack" />
     </LinearLayout>
 </RelativeLayout>
 

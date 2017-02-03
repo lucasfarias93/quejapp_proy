@@ -18,21 +18,6 @@ public class Reclamo2Fragment extends Fragment {
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_reclamo2, container, false);
-        //Nuevos parametros para el view del fragmento
-        RelativeLayout.LayoutParams params =
-                new RelativeLayout.LayoutParams(
-                        RelativeLayout.LayoutParams.MATCH_PARENT,
-                        RelativeLayout.LayoutParams.MATCH_PARENT);
-
-        //Nueva Regla: EL fragmento estara debajo del boton add_fragment
-        params.addRule(RelativeLayout.BELOW, R.id.button_confirm);
-
-        //Margenes: top:41dp
-        params.setMargins(0,41,0,0);
-
-        //Setear los parametros al view
-        view.setLayoutParams(params);
-
         return view;
     }
 }
