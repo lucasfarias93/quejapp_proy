@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="80dp"
+    android:orientation="horizontal"
+    android:padding="@dimen/Size5dp"
+    android:background="@drawable/background_button_blue_white"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/imagen"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"/>
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="0.3">
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/nombre"
+                  android:textSize="30sp"
+                  android:text="hola"
+                  android:textStyle="bold"
+                  android:textColor="@color/colorTextWhite"
+                  android:layout_alignParentTop="true"
+                  android:layout_centerHorizontal="true"
+                  android:layout_gravity="center_horizontal" />
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/data"
+                  android:text="holas"
+                  android:textStyle="bold"
+                  android:textColor="@color/colorTextWhite"
+                  android:layout_alignBottom="@+id/imagen"
+                  android:layout_centerHorizontal="true"
+                  android:textSize="15sp"/>
+    </LinearLayout>
+
+
+</LinearLayout>
+

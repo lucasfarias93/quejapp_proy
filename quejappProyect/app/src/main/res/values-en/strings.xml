@@ -49,4 +49,5 @@
     <string name="tecnique_data"><u>Tecnical Data</u></string>
     <string name="tecnique_descripcion">Application currently in the first version v1.0 developed by a dev. team working in Belatrix SF. Lucas Farias - Elias Medina - Gaston Grippi</string>
     <string name="linkeable"><u>For mor info, follow this link</u></string>
+    <string name="mas_sobre_quejapp"></string>
 </resources>

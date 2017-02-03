@@ -44,10 +44,10 @@
     <string name="mi_perfil">Mi Perfil</string>
     <string name="tipo_reclamo">Seleccione el tipo de reclamo</string>
     <string name="tecnique_data"><u>Datos Tecnicos</u></string>
-    <string name="tecnique_descripcion">Aplicación que actualmente se encuentra en su primera version v1.0, desarrollada por integrantes un equipo de trabajo en Belatrix SF. Lucas Farias - Elias Medina - Gaston Grippi</string>
+    <string name="tecnique_descripcion">Aplicación que actualmente se encuentra en su primera version v1.0, desarrollada por integrantes de un equipo de trabajo en Belatrix SF. Lucas Farias - Elias Medina - Gaston Grippi</string>
     <string name="sistema_operativo"><u> - Sistema operativo soportado:</u> Android 4.+/5.+/6.+</string>
     <string name="agradecimiento">¡Muchas gracias por hacer uso de nuestra aplicacion!</string>
-    <string name="mas_sobre_quejapp">   Quejapp es una aplicacion de uso abierto a todo publico. \n\n Su proposito principal es agilizar los reclamos que se desean hacer en cualqueir supermercado, sin la necesidad de recurrir a el tipico libro de quejas y sugerencias, que en su mayor parte de los distintos locales no esta disponible al publico, o se debe pedir y tarda tiempo.</string>
+    <string name="mas_sobre_quejapp">   Quejapp es una aplicacion de uso abierto a todo publico. \n\n Su proposito principal es agilizar los reclamos que se desean hacer en cualqueir supermercado, sin la necesidad de recurrir a el tipico libro de quejas y sugerencias, que en su mayor parte de los distintos locales no esta disponible al publico, o se debe pedir y consume tiempo.</string>
     <string name="linkeable"><u>Para mas informacion, siga este link</u></string>
 
 </resources>
