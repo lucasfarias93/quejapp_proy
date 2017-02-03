@@ -59,7 +59,7 @@ public class Tab2Fragment extends Fragment {
 
     }
     private void initializeAdapter(){
-        RecyclerViewAdapter adapter = new RecyclerViewAdapter(forms);
+        RecyclerViewAdapter adapter = new RecyclerViewAdapter(forms ,getContext());
         rv.setAdapter(adapter);
     }
 }

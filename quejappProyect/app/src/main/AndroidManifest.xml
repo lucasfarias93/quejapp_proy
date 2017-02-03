@@ -19,7 +19,11 @@
         <activity android:name=".Activities.RegisterActivity" />
         <activity android:name=".Activities.FormularioActivity" />
         <activity android:name=".Activities.UsuarioPerfilActivity" />
-        <activity android:name=".Activities.DatosTecnicosActivity"></activity>
+        <activity android:name=".Activities.DatosTecnicosActivity" />
+        <activity
+            android:name=".Activities.Activity_Opiniones"
+            android:label="@string/title_activity__opiniones"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>
